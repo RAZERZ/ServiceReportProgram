@@ -560,18 +560,25 @@
             </tr>
         </table>
         
+        <table class="Customer-Signature" border="1">
+            <tr>
+                <th>Kundens Signatur:</th>
+            </tr>
+            <tr>
+                <td><br><br></td>
+            </tr>
+        </table>
+        
     </body>
         </div>
-    
+        
         <div id="footer">
         <footer>
+            
         <hr>
-            <button style="float: right;" onclick="skrivPrint()">Skriv Ut</button>
-            <script>
-                function skrivPrint() {
-                    window.print();
-                }
-            </script>
+    
+            <button id="printButton" style="float:right;" onclick="window.print();">Skriv Ut</button>
+            
         <center><p style="font-size:13px;">Skapad av Rami Abou Zahra</p></center>
     </footer>
         </div>

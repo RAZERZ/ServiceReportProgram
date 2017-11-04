@@ -186,18 +186,41 @@
     
     <footer>
         <hr>
-                    <button style="float: right;" onclick="skrivPrint()">Skriv Ut</button>
-            <script>
-                function skrivPrint() {
-                    window.print();
-                }
-            </script>
+        
+        <table class="Info" style="width:100%;">
+            <tr>
+                <th style="font-size:10px;">Adress</th>
+                <th style="font-size:10px;">Telefon</th>
+                <th style="font-size:10px;">Postgiro</th>
+                <th style="font-size:10px;">Internet</th>
+            </tr>
+            <tr>
+                <td style="font-size:10px;">Frödingshöjd 20</td>
+                <td style="font-size:10px;">054-690000</td>
+            </tr>
+            <tr>
+                <td style="font-size:10px;">65637</td>
+                <td style="font-size:10px;">054-7717366</td>
+            </tr>
+        </table>
+        
         <center><p style="font-size:13px;">Skapad av Rami Abou Zahra</p></center>
     </footer>
     
 </html>
 
-<!-- Add total price + VAT
-Automatically pick service number
-Policy (look at website and print policy)
+<!--
+ADRESSS = FRÖDINGSHÖJD 20, 656 37
+
+TELEFON = 054-690000
+NUMMER 2 = 054-7717366
+
+POSTGIRO = 1222935-7
+BANKGIRO = 5297-4581
+ORGANISATIONSNR = 19630311-5239
+
+INTERNET = www.data-butiken.com
+EPOST = info@data-butiken.com
+MOMSREGNR = SE630311523901
+INNHAR F SKATTEBEVIS
 -->
