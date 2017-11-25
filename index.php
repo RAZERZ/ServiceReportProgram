@@ -13,7 +13,7 @@
         
         <!-- Top items -->
         
-        <center><img src="http://www.data-butiken.com/public/img/user/databutikenlogo019.png"></center>
+        <center><img src="http://www.data-butiken.com/public/img/user/databutikenlogo019.png" style="margin-top: -1%;"></center>
         
         <table class="Date" border="1" align="right">
             <tr>
@@ -212,19 +212,3 @@
     </footer>
     
 </html>
-
-<!--
-ADRESSS = FRÖDINGSHÖJD 20, 656 37
-
-TELEFON = 054-690000
-NUMMER 2 = 054-7717366
-
-POSTGIRO = 1222935-7
-BANKGIRO = 5297-4581
-ORGANISATIONSNR = 19630311-5239
-
-INTERNET = www.data-butiken.com
-EPOST = info@data-butiken.com
-MOMSREGNR = SE630311523901
-INNHAR F SKATTEBEVIS
--->
