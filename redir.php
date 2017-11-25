@@ -611,8 +611,9 @@
             </table>
     
             <button id="printButton" style="float:right; margin-top: 1%; margin-bottom: 1%;" onclick="window.print();">Skriv Ut</button>
-            
-        <center><p style="font-size:13px;">Skapad av Rami Abou Zahra</p></center>
+
+            <center><p style="font-size: 10px;">INNEHAR F SKATTEBEVIS</p></center>
+            <center><p style="font-size:13px;">Skapad av Rami Abou Zahra</p></center>
     </footer>
         </div>
     
