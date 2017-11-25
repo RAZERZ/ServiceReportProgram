@@ -16,7 +16,7 @@
         <div id="body">
     <body>
         
-        <center><img src="http://www.data-butiken.com/public/img/user/databutikenlogo019.png"></center>
+        <center><img src="http://www.data-butiken.com/public/img/user/databutikenlogo019.png" style="margin-top: -4%;"></center>
         
         <p class="Init-header" style="font-size:20px;"><b><u>Servicerapport</u></b></p>
 
@@ -27,8 +27,12 @@
             <tr>
                 <td>
                     <?php
+
+                    error_reporting(E_ALL & ~E_NOTICE);
+
                     $kundensNummer = trim($_POST['Kundens-nummer']);
-                    echo "DB-" . date("ymd") . substr($kundensNummer, -2);
+                    $serviceNummer = "DB-" . date("ymd") . substr($kundensNummer, -2);
+                    echo $serviceNummer;
                     ?>
                 </td>
             </tr>
@@ -164,7 +168,7 @@
                     <?php
                     if(isset($_POST['DA-check-gpu'])) {
                         $daCheckGpu = trim($_POST['DA-check-gpu']);
-                        
+
                         if(strlen($daCheckGpu) > 0) {
 ?>
                             <td>
@@ -559,7 +563,15 @@
                 </td>
             </tr>
         </table>
-        
+
+        <?php
+
+        $con = mysqli_connect('localhost', 'root', '','ServiceRapportProgram') or die(mysqli_error());
+
+        $insertQuery = mysqli_query($con, "INSERT INTO serviceRapport VALUES ('$serviceNummer', '$repairName', '$kundensNamn', '$kundensAdress', '$kundensMail', '$kundensNummer', '$daCheckMobo', '$daErrMobo', '$daCheckGpu', '$daErrGpu', '$daCheckCpu', '$daErrCpu', '$daCheckPsu', '$daErrPsu', '$daCheckHdd', '$daErrHdd', '$daCheckCool', '$daErrCool', '$daCheckOther', '$daOtherValue', '$daErrOther', '$ccCheckMobo', '$ccPriceMobo', '$ccCheckGpu', '$ccPriceGpu', '$ccCheckCpu',' $ccPriceCpu', '$ccCheckPsu', '$ccPricePsu', '$ccCheckHdd', '$ccPriceHdd', '$ccCheckCool', '$ccPriceCool', '$ccCheckOther', '$ccPriceOther', '$TotalPrice')");
+
+        ?>
+
         <table class="Customer-Signature" border="1">
             <tr>
                 <th>Kundens Signatur:</th>
@@ -576,8 +588,29 @@
         <footer>
             
         <hr>
+
+            <table class="Info" style="width:100%;">
+                <tr>
+                    <th style="font-size:10px; width: 10%;">Adress</th>
+                    <th style="font-size:10px; width: 10%;">Telefon</th>
+                    <th style="font-size:10px; width: 10%;">Postgiro</th>
+                    <th style="font-size:10px; width: 10%;">Internet</th>
+                </tr>
+                <tr>
+                    <td style="font-size:10px;">Frödingshöjd 20</td>
+                    <td style="font-size:10px;">054-690000</td>
+                    <td style="font-size: 10px;">1222935-7</td>
+                    <td style="font-size: 10px;">Sida = www.data-butiken.com<br>Mail = info@data-butiken.com</td>
+                </tr>
+                <tr>
+                    <td style="font-size:10px;">65637</td>
+                    <td style="font-size:10px;">054-7717366</td>
+                    <td style="font-size:10px;">5297-4581</td>
+                    <td style="font-size: 10px;">MOMSREGNR = SE630311523901</td>
+                </tr>
+            </table>
     
-            <button id="printButton" style="float:right;" onclick="window.print();">Skriv Ut</button>
+            <button id="printButton" style="float:right; margin-top: 1%; margin-bottom: 1%;" onclick="window.print();">Skriv Ut</button>
             
         <center><p style="font-size:13px;">Skapad av Rami Abou Zahra</p></center>
     </footer>
