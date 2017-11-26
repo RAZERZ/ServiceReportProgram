@@ -36,43 +36,43 @@ if ($result = mysqli_query($con, $query)) { ?>
                 <td><? print_r($row['kNummer']); ?></td>
                 <td><?
 
-                    if(strlen($row['daCheckMobo']) > 0) { ?>
+                    if($row['daCheckMobo'] > 0) { ?>
                         <ul><li>Moderkort</li></ul>
 
                         <?php
                     }
 
-                    if(strlen($row['daCheckGpu']) > 0) { ?>
+                    if($row['daCheckGpu'] > 0) { ?>
                         <ul><li>Grafikkort</li></ul>
 
                         <?php
                     }
 
-                    if(strlen($row['daCheckCpu']) > 0) { ?>
+                    if($row['daCheckCpu'] > 0) { ?>
                         <ul><li>Processorn</li></ul>
 
                         <?php
                     }
 
-                    if(strlen($row['daCheckPsu']) > 0) { ?>
+                    if($row['daCheckPsu'] > 0) { ?>
                         <ul><li>Nätaggregat</li></ul>
 
                         <?php
                     }
 
-                    if(strlen($row['daCheckHdd']) > 0) { ?>
+                    if($row['daCheckHdd'] > 0) { ?>
                         <ul><li>Hårddisk</li></ul>
 
                         <?php
                     }
 
-                    if(strlen($row['daCheckCool']) > 0) { ?>
+                    if($row['daCheckCool'] > 0) { ?>
                         <ul><li>Kylaren</li></ul>
 
                         <?php
                     }
 
-                    if(strlen($row['daCheckOther']) > 0) { ?>
+                    if($row['daCheckOther'] > 0) { ?>
                         <ul><li><? print_r($row['daOtherValue']); ?></li></ul>
 
                         <?php
@@ -116,7 +116,7 @@ if ($result = mysqli_query($con, $query)) { ?>
                         <?php
                     }
 
-                    if(strlen($row['daCheckOther']) > 0) { ?>
+                    if(strlen($row['daErrOther']) > 0) { ?>
                         <ul><li><? print_r($row['daErrOther']); ?></li></ul>
 
                         <?php
@@ -126,43 +126,43 @@ if ($result = mysqli_query($con, $query)) { ?>
                 </td>
                 <td><?
 
-                    if(strlen($row['ccCheckMobo']) > 0) { ?>
+                    if($row['ccCheckMobo'] > 0) { ?>
                         <ul><li>Moderkort</li></ul>
 
                         <?php
                     }
 
-                    if(strlen($row['ccCheckGpu']) > 0) { ?>
+                    if($row['ccCheckGpu'] > 0) { ?>
                         <ul><li>Grafikkort</li></ul>
 
                         <?php
                     }
 
-                    if(strlen($row['ccCheckCpu']) > 0) { ?>
+                    if($row['ccCheckCpu'] > 0) { ?>
                         <ul><li>Processorn</li></ul>
 
                         <?php
                     }
 
-                    if(strlen($row['ccCheckPsu']) > 0) { ?>
+                    if($row['ccCheckPsu'] > 0) { ?>
                         <ul><li>Nätaggregat</li></ul>
 
                         <?php
                     }
 
-                    if(strlen($row['ccCheckHdd']) > 0) { ?>
+                    if($row['ccCheckHdd'] > 0) { ?>
                         <ul><li>Hårddisk</li></ul>
 
                         <?php
                     }
 
-                    if(strlen($row['ccCheckCool']) > 0) { ?>
+                    if($row['ccCheckCool'] > 0) { ?>
                         <ul><li>Kylaren</li></ul>
 
                         <?php
                     }
 
-                    if(strlen($row['ccCheckOther']) > 0) { ?>
+                    if($row['ccCheckOther'] > 0) { ?>
                         <ul><li><? print_r($row['daOtherValue']); ?></li></ul>
 
                         <?php
@@ -172,43 +172,43 @@ if ($result = mysqli_query($con, $query)) { ?>
                 </td>
                 <td><?
 
-                    if(strlen($row['ccPriceMobo']) > 0) { ?>
+                    if($row['ccPriceMobo'] > 0) { ?>
                         <ul><li><? print_r($row['ccPriceMobo']); ?>kr</li></ul>
 
                         <?php
                     }
 
-                    if(strlen($row['ccPriceGpu']) > 0) { ?>
+                    if($row['ccPriceGpu'] > 0) { ?>
                         <ul><li><? print_r($row['ccPriceGpu']); ?>kr</li></ul>
 
                         <?php
                     }
 
-                    if(strlen($row['ccPriceCpu']) > 0) { ?>
+                    if($row['ccPriceCpu'] > 0) { ?>
                         <ul><li><? print_r($row['ccPriceCpu']); ?>kr</li></ul>
 
                         <?php
                     }
 
-                    if(strlen($row['ccPricePsu']) > 0) { ?>
+                    if($row['ccPricePsu'] > 0) { ?>
                         <ul><li><? print_r($row['ccPricePsu']); ?>kr</li></ul>
 
                         <?php
                     }
 
-                    if(strlen($row['ccPriceHdd']) > 0) { ?>
+                    if($row['ccPriceHdd'] > 0) { ?>
                         <ul><li><? print_r($row['ccPriceHdd']); ?>kr</li></ul>
 
                         <?php
                     }
 
-                    if(strlen($row['ccPriceCool']) > 0) { ?>
+                    if($row['ccPriceCool'] > 0) { ?>
                         <ul><li><? print_r($row['ccPriceCool']); ?>kr</li></ul>
 
                         <?php
                     }
 
-                    if(strlen($row['ccValueOther']) > 0) { ?>
+                    if($row['ccValueOther'] > 0) { ?>
                         <ul><li><? print_r($row['ccValueOther']); ?>kr</li></ul>
 
                         <?php
