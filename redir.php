@@ -583,11 +583,13 @@
         
     </body>
         </div>
-        
+
+        <button id="printButton" style="float:right; margin-top: 1%; margin-bottom: 1%;" onclick="window.print();">Skriv Ut</button>
+
         <div id="footer">
-        <footer>
-            
-        <hr>
+            <footer>
+
+            <hr style="margin-top: 5%;">
 
             <table class="Info" style="width:100%;">
                 <tr>
@@ -609,8 +611,6 @@
                     <td style="font-size: 10px;">MOMSREGNR = SE630311523901</td>
                 </tr>
             </table>
-    
-            <button id="printButton" style="float:right; margin-top: 1%; margin-bottom: 1%;" onclick="window.print();">Skriv Ut</button>
 
             <center><p style="font-size: 10px;">INNEHAR F SKATTEBEVIS</p></center>
             <center><p style="font-size:13px;">Skapad av Rami Abou Zahra</p></center>
