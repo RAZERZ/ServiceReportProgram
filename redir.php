@@ -349,7 +349,26 @@
                 <th>Reparatörens åtgärd:</th>
                 <th>Pris:</th>
             </tr>
-            <tr>                    <?php
+            <tr>
+                <?php
+                    if(isset($_POST['CC-check-search'])) {
+                        $ccCheckSearch = trim($_POST['CC-check-search']);
+
+                        if(strlen($ccCheckSearch) > 0) {
+?>
+                            <td>
+                                <input type="checkbox" <? echo 'checked="checked"'; ?> /> Felsökning
+                            </td>
+                            <td>
+                                575kr
+                            </td>
+<?php
+                        }
+                    }
+                ?>
+            </tr>
+            <tr>
+                <?php
                     if(isset($_POST['CC-check-mobo'])) {
                         $ccCheckMobo = trim($_POST['CC-check-mobo']);
                         
@@ -647,5 +666,5 @@
         </div>
     
     </div>
-        
+
 </html>

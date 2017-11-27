@@ -121,6 +121,10 @@
                 <th>Pris:</th>
             </tr>
             <tr>
+                <td><input type="checkbox" name="CC-check-search">Felsökning</td>
+                <td>575kr</td>
+            </tr>
+            <tr>
                 <td>
                     <input type="checkbox" name="CC-check-mobo">Moderkortet
                 </td>
