@@ -20,7 +20,7 @@
         
         <p class="Init-header" style="font-size:20px;"><b><u>Servicerapport</u></b></p>
 
-        <table class="Service-nummer" border="1">
+        <table class="Service-nummer" border="2">
             <tr>
                 <th>Service nummer:</th>
             </tr>
@@ -38,7 +38,7 @@
             </tr>
         </table>
         
-        <table class="Date" border="1" align="right">
+        <table class="Date" border="2" align="right">
             <tr>
                 <th>Datum</th>
             </tr>
@@ -47,7 +47,7 @@
             </tr>
         </table>
         
-        <table class="Reparator" border="1">
+        <table class="Reparator" border="2">
             <tr>
                 <th>Ansvarig Reparatör</th>
             </tr>
@@ -67,7 +67,7 @@
             </tr>
         </table>
         
-        <table class="Kundens-uppgifter" border="1" align="right">
+        <table class="Kundens-uppgifter" border="2" align="right">
             <tr>
                 <th>Kundens namn:</th>
                 <th>Adress:</th>
@@ -131,7 +131,7 @@
         </table>
         
         
-        <table class="Defect-Area" border="1">
+        <table class="Defect-Area" border="2">
             <tr>
                 <th>Problemet finns i:</th>
                 <th>Specifikt i:</th>
@@ -344,7 +344,7 @@
             </tr>
         </table>
         
-        <table class="Customer-Choice"  border="1">
+        <table class="Customer-Choice"  border="2">
             <tr>
                 <th>Reparatörens åtgärd:</th>
                 <th>Pris:</th>
@@ -609,7 +609,7 @@
 
         <div class="signatures">
 
-        <table class="Customer-Signature" border="1">
+        <table class="Customer-Signature" border="2">
             <tr>
                 <th>Kundens Signatur:</th>
             </tr>
@@ -618,7 +618,7 @@
             </tr>
         </table>
 
-    <table class="Repair-Signature" border="1">
+    <table class="Repair-Signature" border="2">
         <tr>
             <th>Reparatörens Signatur</th>
         </tr>
