@@ -77,11 +77,22 @@ html, body {
     margin-left: 11%
 }
 
+.signatures {
+    display: -webkit-box;
+}
+
 .Customer-Signature {
     position: relative;
     margin-top: 1%;
-    width: 78%;
+    width: 35%;
     margin-left: 11%;
+}
+
+.Repair-Signature {
+    position: inherit;
+    width: 35%;
+    margin-left: 8%;
+    margin-top: 1%;
 }
 
 .Info {

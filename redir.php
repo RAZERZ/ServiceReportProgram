@@ -370,7 +370,9 @@
                     if(strlen($ccPriceMobo) > 0) {
 ?>
                         <td>
-                            <?php echo "$ccPriceMobo" . "kr"; ?>
+                            <?php echo "Inkl Moms: " . "$ccPriceMobo" . "kr" . "<br>";
+                            echo "Exkl Moms: " . 0.25 * $ccPriceMobo . "kr";
+                            ?>
                         </td>
 <?php
                     }
@@ -398,7 +400,9 @@
                     if(strlen($ccPriceGpu) > 0) {
 ?>
                         <td>
-                            <?php echo "$ccPriceGpu" . "kr"; ?>
+                            <?php echo "Inkl Moms: " . "$ccPriceGpu" . "kr" . "<br>";
+                            echo "Exkl Moms: " . 0.25 * $ccPriceGpu . "kr";
+                            ?>
                         </td>
 <?php
                     }
@@ -426,7 +430,9 @@
                     if(strlen($ccPriceCpu) > 0) {
 ?>
                     <td>
-                        <?php echo "$ccPriceCpu" . "kr"; ?>
+                        <?php echo "Inkl Moms: " . "$ccPriceCpu" . "kr" . "<br>";
+                        echo "Exkl Moms: " . 0.25 * $ccPriceCpu . "kr";
+                        ?>
                     </td>
 <?php
                     }
@@ -454,7 +460,9 @@
                     if(strlen($ccPricePsu) > 0) {
 ?>
                     <td>
-                        <?php echo "$ccPricePsu" . "kr"; ?>
+                        <?php echo "Inkl Moms: " . "$ccPricePsu" . "kr" . "<br>";
+                        echo "Exkl Moms: " . 0.25 * $ccPricePsu . "kr";
+                        ?>
                     </td>
 <?php
                     }
@@ -482,7 +490,9 @@
                     if(strlen($ccPriceHdd) > 0) {
 ?>
                     <td>
-                        <?php echo "$ccPriceHdd" . "kr"; ?>
+                        <?php echo "Inkl Moms: " . "$ccPriceHdd" . "kr" . "<br>";
+                        echo "Exkl Moms: " . 0.25* $ccPriceHdd . "kr";
+                        ?>
                     </td>
 <?php
                     }
@@ -510,7 +520,9 @@
                     if(strlen($ccPriceCool) > 0) {
 ?>
                     <td>
-                        <?php echo "$ccPriceCool" . "kr"; ?>
+                        <?php echo "Inkl Moms: " . "$ccPriceCool" . "kr" . "<br>";
+                        echo "Exkl Moms: " . 0.25 * $ccPriceCool . "kr";
+                        ?>
                     </td>
 <?php
                     }
@@ -539,7 +551,9 @@
                     if(strlen($ccPriceOther) > 0) {
 ?>
                     <td>
-                        <?php echo "$ccPriceOther" . "kr"; ?>
+                        <?php echo "Inkl Moms: " . "$ccPriceOther" . "kr";
+                        echo "Exkl Moms: " . 0.25 * $ccPriceOther . "kr";
+                        ?>
                     </td>
 <?php
                     }
@@ -550,15 +564,17 @@
                 <?php
                 $InitPrice = 575;
                 $TotalPrice = $InitPrice + $ccPriceOther + $ccPriceCool + $ccPriceHdd + $ccPricePsu + $ccPriceCpu + $ccPriceGpu + $ccPriceMobo;
+                $exTotalPrice = $InitPrice + (0.25 * $ccPriceOther) + (0.25 * $ccPriceCool) + (0.25 * $ccPriceHdd) + (0.25 * $ccPricePsu) + (0.25 * $ccPriceCpu) + (0.25 * $ccPriceGpu) + (0.25 * $ccPriceMobo);
                 ?>
                 <td>
                     <?php
-                    echo "<hr><b>Att betala: </b>";
+                    echo "<hr><br><b>Att betala: </b>";
                     ?>
                 </td>
                 <td>
                     <?php
-                    echo "<hr>" . "$TotalPrice" . "kr";
+                    echo "<hr>" . "Inkl Moms: " . "$TotalPrice" . "kr" . "<br>";
+                    echo "Exkl Moms: " . "$exTotalPrice" . "kr";
                     ?>
                 </td>
             </tr>
@@ -572,6 +588,8 @@
 
         ?>
 
+        <div class="signatures">
+
         <table class="Customer-Signature" border="1">
             <tr>
                 <th>Kundens Signatur:</th>
@@ -580,8 +598,19 @@
                 <td><br><br></td>
             </tr>
         </table>
+
+    <table class="Repair-Signature" border="1">
+        <tr>
+            <th>Reparatörens Signatur</th>
+        </tr>
+        <tr>
+            <td><br><br></td>
+        </tr>
+    </table>
         
     </body>
+        </div>
+
         </div>
 
         <button id="printButton" style="float:right; margin-top: 1%; margin-bottom: 1%;" onclick="window.print();">Skriv Ut</button>
@@ -613,7 +642,7 @@
             </table>
 
             <center><p style="font-size: 10px;">INNEHAR F SKATTEBEVIS</p></center>
-            <center><p style="font-size:13px;">Skapad av Rami Abou Zahra</p></center>
+            <p style="font-size:13px; text-align: left;">Skapad av Rami Abou Zahra</p>
     </footer>
         </div>
     
