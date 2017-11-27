@@ -587,12 +587,12 @@
                 ?>
                 <td>
                     <?php
-                    echo "<hr><br><b>Att betala: </b>";
+                    echo "<hr><br><br><b>Att betala: </b>";
                     ?>
                 </td>
                 <td>
                     <?php
-                    echo "<hr>" . "Inkl Moms: " . "$TotalPrice" . "kr" . "<br>";
+                    echo "<hr>" . "Inkl Moms: " . "$TotalPrice" . "kr" . "<br><br>";
                     echo "Exkl Moms: " . "$exTotalPrice" . "kr";
                     ?>
                 </td>
