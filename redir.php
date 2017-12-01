@@ -357,7 +357,7 @@
                         if(strlen($ccCheckSearch) > 0) {
 ?>
                             <td>
-                                <input type="checkbox" <? echo 'checked="checked"'; ?> /> Felsökning
+                                <input type="checkbox" <?php echo 'checked="checked"'; ?> /> Felsökning
                             </td>
                             <td>
                                 575kr
