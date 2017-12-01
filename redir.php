@@ -353,19 +353,21 @@
                 <?php
                     if(isset($_POST['CC-check-search'])) {
                         $ccCheckSearch = trim($_POST['CC-check-search']);
-                        $ccPriceSearch = "575";
 
-                        if(strlen($ccCheckSearch) > 0) {
-?>
+                        if (strlen($ccCheckSearch) > 0) {
+                            $ccPriceSearch = "575";
+
+                            ?>
                             <td>
                                 <input type="checkbox" <?php echo 'checked="checked"'; ?> /> Felsökning
                             </td>
                             <td>
                                 575kr
                             </td>
-<?php
+                            <?php
                         }
                     }
+
                 ?>
             </tr>
             <tr>
@@ -463,7 +465,7 @@
                 <?php
                 if(isset($_POST['CC-check-psu'])) {
                     $ccCheckPsu = trim($_POST['CC-check-psu']);
-                    
+
                     if(strlen($ccCheckPsu) > 0) {
 ?>
                     <td>
@@ -472,6 +474,7 @@
 <?php
                     }
                 }
+
                 ?>
                 <?php
                 if(isset($_POST['CC-price-psu'])) {
@@ -487,6 +490,7 @@
 <?php
                     }
                 }
+
                 ?>
             </tr>
             <tr>
@@ -571,7 +575,7 @@
                     if(strlen($ccPriceOther) > 0) {
 ?>
                     <td>
-                        <?php echo "Inkl Moms: " . "$ccPriceOther" . "kr";
+                        <?php echo "Inkl Moms: " . "$ccPriceOther" . "kr" . "<br>";
                         echo "Exkl Moms: " . 0.25 * $ccPriceOther . "kr";
                         ?>
                     </td>
@@ -582,9 +586,8 @@
             </tr>
             <tr>
                 <?php
-                $InitPrice = 575;
-                $TotalPrice = $InitPrice + $ccPriceOther + $ccPriceCool + $ccPriceHdd + $ccPricePsu + $ccPriceCpu + $ccPriceGpu + $ccPriceMobo;
-                $exTotalPrice = $InitPrice + (0.25 * $ccPriceOther) + (0.25 * $ccPriceCool) + (0.25 * $ccPriceHdd) + (0.25 * $ccPricePsu) + (0.25 * $ccPriceCpu) + (0.25 * $ccPriceGpu) + (0.25 * $ccPriceMobo);
+                $TotalPrice = $ccPriceSearch + $ccPriceOther + $ccPriceCool + $ccPriceHdd + $ccPricePsu + $ccPriceCpu + $ccPriceGpu + $ccPriceMobo;
+                $exTotalPrice = $ccPriceSearch + (0.25 * $ccPriceOther) + (0.25 * $ccPriceCool) + (0.25 * $ccPriceHdd) + (0.25 * $ccPricePsu) + (0.25 * $ccPriceCpu) + (0.25 * $ccPriceGpu) + (0.25 * $ccPriceMobo);
                 ?>
                 <td>
                     <?php

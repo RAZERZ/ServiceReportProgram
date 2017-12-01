@@ -111,6 +111,10 @@ if ($result = mysqli_query($con, $query)) { ?>
 
                 echo "</td><td>";
 
+                    if($row['ccCheckSearch'] > 0) {
+                        echo "<ul><li>Felsökning</li></ul>";
+                    }
+
                     if($row['ccCheckMobo'] > 0) {
                         echo "<ul><li>Moderkort</li></ul>";
 
@@ -147,6 +151,10 @@ if ($result = mysqli_query($con, $query)) { ?>
                     }
 
                 echo "</td><td>";
+
+                    if($row['ccPriceSearch'] > 0) {
+                        print_r("<ul><li>" . $row['ccPriceSearch'] . "kr" . "</li></ul>");
+                    }
 
                     if($row['ccPriceMobo'] > 0) {
                         print_r("<ul><li>" . $row['ccPriceMobo'] . "kr" . "</li></ul>");
