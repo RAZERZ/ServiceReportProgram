@@ -25,208 +25,171 @@ if ($result = mysqli_query($con, $query)) { ?>
 
 <?php
 
-    while ($row = mysqli_fetch_assoc($result)) { ?>
+    while ($row = mysqli_fetch_assoc($result)) {
 
-            <tr>
-                <td><? print_r($row['serviceNummer']); ?></td>
-                <td><? print_r($row['repairName']); ?></td>
-                <td><? print_r($row['kNamn']); ?></td>
-                <td><? print_r($row['kAdress']); ?></td>
-                <td><? print_r($row['kMail']); ?></td>
-                <td><? print_r($row['kNummer']); ?></td>
-                <td><?
+            echo "<tr>";
 
-                    if($row['daCheckMobo'] > 0) { ?>
-                        <ul><li>Moderkort</li></ul>
+                print_r("<td>" . $row['serviceNummer'] . "</td>");
+                print_r("<td>" . $row['repairName'] . "</td>");
+                print_r("<td>" . $row['kNamn'] . "</td>");
+                print_r("<td>" . $row['kAdress'] . "</td>");
+                print_r("<td>" . $row['kMail'] . "</td>");
+                print_r("<td>" . $row['kNummer'] . "</td>");
+                echo "<td>";
 
-                        <?php
+                    if($row['daCheckMobo'] > 0) {
+                        echo "<ul><li>Moderkort</li></ul>";
+
                     }
 
-                    if($row['daCheckGpu'] > 0) { ?>
-                        <ul><li>Grafikkort</li></ul>
+                    if($row['daCheckGpu'] > 0) {
+                        echo "<ul><li>Grafikkort</li></ul>";
 
-                        <?php
                     }
 
-                    if($row['daCheckCpu'] > 0) { ?>
-                        <ul><li>Processorn</li></ul>
+                    if($row['daCheckCpu'] > 0) {
+                        echo "<ul><li>Processorn</li></ul>";
 
-                        <?php
                     }
 
-                    if($row['daCheckPsu'] > 0) { ?>
-                        <ul><li>Nätaggregat</li></ul>
+                    if($row['daCheckPsu'] > 0) {
+                        echo "<ul><li>Nätaggregat</li></ul>";
 
-                        <?php
                     }
 
-                    if($row['daCheckHdd'] > 0) { ?>
-                        <ul><li>Hårddisk</li></ul>
+                    if($row['daCheckHdd'] > 0) {
+                        echo "<ul><li>Hårddisk</li></ul>";
 
-                        <?php
                     }
 
-                    if($row['daCheckCool'] > 0) { ?>
-                        <ul><li>Kylaren</li></ul>
+                    if($row['daCheckCool'] > 0) {
+                        echo "<ul><li>Kylaren</li></ul>";
 
-                        <?php
                     }
 
-                    if($row['daCheckOther'] > 0) { ?>
-                        <ul><li><? print_r($row['daOtherValue']); ?></li></ul>
+                    if($row['daCheckOther'] > 0) {
+                        print_r("<ul><li>" . $row['daOtherValue'] . "</li></ul>");
 
-                        <?php
-                    }
-                    ?></td>
-                <td><?
-
-                    if(strlen($row['daErrMobo']) > 0) { ?>
-                        <ul><li><? print_r($row['daErrMobo']); ?></li></ul>
-
-                        <?php
                     }
 
-                    if(strlen($row['daErrGpu']) > 0) { ?>
-                        <ul><li><? print_r($row['daErrGpu']); ?></li></ul>
+                    echo "</td><td>";
 
-                        <?php
+                    if(strlen($row['daErrMobo']) > 0) {
+                        print_r("<ul><li>" . $row['daErrMobo'] . "</li></ul>");
+
                     }
 
-                    if(strlen($row['daErrCpu']) > 0) { ?>
-                        <ul><li><? print_r($row['daErrCpu']); ?></li></ul>
+                    if(strlen($row['daErrGpu']) > 0) {
+                        print_r("<ul><li>" . $row['daErrGpu'] . "</li></ul>");
 
-                        <?php
                     }
 
-                    if(strlen($row['daErrPsu']) > 0) { ?>
-                        <ul><li><? print_r($row['daErrPsu']); ?></li></ul>
+                    if(strlen($row['daErrCpu']) > 0) {
+                        print_r("<ul><li>" . $row['daErrCpu'] . "</li></ul>");
 
-                        <?php
                     }
 
-                    if(strlen($row['daErrHdd']) > 0) { ?>
-                        <ul><li><? print_r($row['daErrHdd']); ?></li></ul>
+                    if(strlen($row['daErrPsu']) > 0) {
+                        print_r("<ul><li>" . $row['daErrPsu'] . "</li></ul>");
 
-                        <?php
                     }
 
-                    if(strlen($row['daErrCool']) > 0) { ?>
-                        <ul><li><? print_r($row['daErrCool']); ?></li></ul>
+                    if(strlen($row['daErrHdd']) > 0) {
+                        print_r("<ul><li>" . $row['daErrHdd'] . "</li></ul>");
 
-                        <?php
                     }
 
-                    if(strlen($row['daErrOther']) > 0) { ?>
-                        <ul><li><? print_r($row['daErrOther']); ?></li></ul>
+                    if(strlen($row['daErrCool']) > 0) {
+                        print_r("<ul><li>" . $row['daErrCool'] . "</li></ul>");
 
-                        <?php
                     }
 
-                    ?>
-                </td>
-                <td><?
+                    if(strlen($row['daErrOther']) > 0) {
+                        print_r("<ul><li>" . $row['daErrOther'] . "</li></ul>");
 
-                    if($row['ccCheckMobo'] > 0) { ?>
-                        <ul><li>Moderkort</li></ul>
-
-                        <?php
                     }
 
-                    if($row['ccCheckGpu'] > 0) { ?>
-                        <ul><li>Grafikkort</li></ul>
+                echo "</td><td>";
 
-                        <?php
+                    if($row['ccCheckMobo'] > 0) {
+                        echo "<ul><li>Moderkort</li></ul>";
+
                     }
 
-                    if($row['ccCheckCpu'] > 0) { ?>
-                        <ul><li>Processorn</li></ul>
+                    if($row['ccCheckGpu'] > 0) {
+                        echo "<ul><li>Grafikkort</li></ul>";
 
-                        <?php
                     }
 
-                    if($row['ccCheckPsu'] > 0) { ?>
-                        <ul><li>Nätaggregat</li></ul>
+                    if($row['ccCheckCpu'] > 0) {
+                        echo "<ul><li>Processorn</li></ul>";
 
-                        <?php
                     }
 
-                    if($row['ccCheckHdd'] > 0) { ?>
-                        <ul><li>Hårddisk</li></ul>
+                    if($row['ccCheckPsu'] > 0) {
+                        echo "<ul><li>Nätaggregat</li></ul>";
 
-                        <?php
                     }
 
-                    if($row['ccCheckCool'] > 0) { ?>
-                        <ul><li>Kylaren</li></ul>
+                    if($row['ccCheckHdd'] > 0) {
+                        echo "<ul><li>Hårddisk</li></ul>";
 
-                        <?php
                     }
 
-                    if($row['ccCheckOther'] > 0) { ?>
-                        <ul><li><? print_r($row['daOtherValue']); ?></li></ul>
+                    if($row['ccCheckCool'] > 0) {
+                        echo "<ul><li>Kylaren</li></ul>";
 
-                        <?php
                     }
 
-                    ?>
-                </td>
-                <td><?
+                    if($row['ccCheckOther'] > 0) {
+                        print_r("<ul><li>" . $row['daOtherValue'] . "</li></ul>");
 
-                    if($row['ccPriceMobo'] > 0) { ?>
-                        <ul><li><? print_r($row['ccPriceMobo']); ?>kr</li></ul>
-
-                        <?php
                     }
 
-                    if($row['ccPriceGpu'] > 0) { ?>
-                        <ul><li><? print_r($row['ccPriceGpu']); ?>kr</li></ul>
+                echo "</td><td>";
 
-                        <?php
+                    if($row['ccPriceMobo'] > 0) {
+                        print_r("<ul><li>" . $row['ccPriceMobo'] . "kr" . "</li></ul>");
+
                     }
 
-                    if($row['ccPriceCpu'] > 0) { ?>
-                        <ul><li><? print_r($row['ccPriceCpu']); ?>kr</li></ul>
+                    if($row['ccPriceGpu'] > 0) {
+                        print_r("<ul><li>" . $row['ccPriceGpu'] . "kr" . "</li></ul>");
 
-                        <?php
                     }
 
-                    if($row['ccPricePsu'] > 0) { ?>
-                        <ul><li><? print_r($row['ccPricePsu']); ?>kr</li></ul>
+                    if($row['ccPriceCpu'] > 0) {
+                        print_r("<ul><li>" . $row['ccPriceCpu'] . "kr" . "</li></ul>");
 
-                        <?php
                     }
 
-                    if($row['ccPriceHdd'] > 0) { ?>
-                        <ul><li><? print_r($row['ccPriceHdd']); ?>kr</li></ul>
+                    if($row['ccPricePsu'] > 0) {
+                        print_r("<ul><li>" . $row['ccPricePsu'] . "kr" . "</li></ul>");
 
-                        <?php
                     }
 
-                    if($row['ccPriceCool'] > 0) { ?>
-                        <ul><li><? print_r($row['ccPriceCool']); ?>kr</li></ul>
+                    if($row['ccPriceHdd'] > 0) {
+                        print_r("<ul><li>" . $row['ccPriceHdd'] . "kr" . "</li></ul>");
 
-                        <?php
                     }
 
-                    if($row['ccValueOther'] > 0) { ?>
-                        <ul><li><? print_r($row['ccValueOther']); ?>kr</li></ul>
+                    if($row['ccPriceCool'] > 0) {
+                        print_r("<ul><li>" . $row['ccPriceCool'] . "kr" . "</li></ul>");
 
-                        <?php
                     }
 
-                    ?>
-                </td>
-                <td><? print_r($row['totalPrice']); ?>kr</td>
-            </tr>
-<?php
+                    if($row['ccValueOther'] > 0) {
+                        print_r("<ul><li>" . $row['ccValueOther'] . "kr" . "</li></ul>");
+
+                    }
+
+                print_r("</td><td>" . $row['totalPrice'] . "kr" . "</td>");
+
+        echo "</tr>";
 
     }
 
-?>
-
-    </table></center>
-
-<?php
+    echo "</table></center>";
 
     mysqli_free_result($result);
     
