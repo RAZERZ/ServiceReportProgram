@@ -392,7 +392,7 @@
                         ?>
                         <td>
                             <?php echo "Inkl Moms: " . "$ccPriceMobo" . "kr" . "<br>";
-                            echo "Exkl Moms: " . 0.25 * $ccPriceMobo . "kr";
+                            echo "Exkl Moms: " . 0.75 * $ccPriceMobo . "kr";
                             ?>
                         </td>
                         <?php
@@ -422,7 +422,7 @@
                         ?>
                         <td>
                             <?php echo "Inkl Moms: " . "$ccPriceGpu" . "kr" . "<br>";
-                            echo "Exkl Moms: " . 0.25 * $ccPriceGpu . "kr";
+                            echo "Exkl Moms: " . 0.75 * $ccPriceGpu . "kr";
                             ?>
                         </td>
                         <?php
@@ -452,7 +452,7 @@
                         ?>
                         <td>
                             <?php echo "Inkl Moms: " . "$ccPriceCpu" . "kr" . "<br>";
-                            echo "Exkl Moms: " . 0.25 * $ccPriceCpu . "kr";
+                            echo "Exkl Moms: " . 0.75 * $ccPriceCpu . "kr";
                             ?>
                         </td>
                         <?php
@@ -483,7 +483,7 @@
                         ?>
                         <td>
                             <?php echo "Inkl Moms: " . "$ccPricePsu" . "kr" . "<br>";
-                            echo "Exkl Moms: " . 0.25 * $ccPricePsu . "kr";
+                            echo "Exkl Moms: " . 0.75 * $ccPricePsu . "kr";
                             ?>
                         </td>
                         <?php
@@ -514,7 +514,7 @@
                         ?>
                         <td>
                             <?php echo "Inkl Moms: " . "$ccPriceHdd" . "kr" . "<br>";
-                            echo "Exkl Moms: " . 0.25* $ccPriceHdd . "kr";
+                            echo "Exkl Moms: " . 0.75* $ccPriceHdd . "kr";
                             ?>
                         </td>
                         <?php
@@ -544,7 +544,7 @@
                         ?>
                         <td>
                             <?php echo "Inkl Moms: " . "$ccPriceCool" . "kr" . "<br>";
-                            echo "Exkl Moms: " . 0.25 * $ccPriceCool . "kr";
+                            echo "Exkl Moms: " . 0.75 * $ccPriceCool . "kr";
                             ?>
                         </td>
                         <?php
@@ -568,13 +568,17 @@
                 }
                 ?>
 
-                <td><?php echo "$ccValueOther"; ?></td>
+                <td>
+                    <?php echo "Inkl Moms: " . "$ccValueOther" . "kr" . "<br>";
+                    echo "Exkl Moms: " . 0.75 * $ccValueOther . "kr";
+                    ?>
+                </td>
 
             </tr>
             <tr>
                 <?php
                 $TotalPrice = $ccPriceSearch + $ccValueOther + $ccPriceCool + $ccPriceHdd + $ccPricePsu + $ccPriceCpu + $ccPriceGpu + $ccPriceMobo;
-                $exTotalPrice = $ccPriceSearch + (0.25 * $ccPriceOther) + (0.25 * $ccPriceCool) + (0.25 * $ccPriceHdd) + (0.25 * $ccPricePsu) + (0.25 * $ccPriceCpu) + (0.25 * $ccPriceGpu) + (0.25 * $ccPriceMobo);
+                $exTotalPrice = $ccPriceSearch + (0.75 * $ccPriceOther) + (0.75 * $ccPriceCool) + (0.75 * $ccPriceHdd) + (0.75 * $ccPricePsu) + (0.75 * $ccPriceCpu) + (0.75 * $ccPriceGpu) + (0.75 * $ccPriceMobo);
                 ?>
                 <td>
                     <?php
