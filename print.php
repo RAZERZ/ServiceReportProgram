@@ -346,7 +346,8 @@
         <table class="Customer-Choice"  border="2">
             <tr>
                 <th>Reparatörens åtgärd:</th>
-                <th>Pris:</th>
+                <th>Pris Inkl Moms:</th>
+                <th>Exkl Moms:</th>
             </tr>
             <tr>
                 <?php
@@ -363,6 +364,7 @@
                         <td>
                             575kr
                         </td>
+                        <td>575kr</td>
                         <?php
                     }
                 }
@@ -391,9 +393,9 @@
                     if(($ccPriceMobo) > 0) {
                         ?>
                         <td>
-                            <?php echo "Inkl Moms: " . "$ccPriceMobo" . "kr" . "<br>";
-                            echo "Exkl Moms: " . 0.75 * $ccPriceMobo . "kr";
-                            ?>
+                            <?php echo "$ccPriceMobo" . "kr" . "<br>"; ?>
+                        </td>
+                        <td><?php echo 0.75 * $ccPriceMobo . "kr"; ?>
                         </td>
                         <?php
                     }
@@ -421,10 +423,9 @@
                     if(($ccPriceGpu) > 0) {
                         ?>
                         <td>
-                            <?php echo "Inkl Moms: " . "$ccPriceGpu" . "kr" . "<br>";
-                            echo "Exkl Moms: " . 0.75 * $ccPriceGpu . "kr";
-                            ?>
+                            <?php echo "$ccPriceGpu" . "kr"; ?>
                         </td>
+                        <td><?php echo 0.75 * $ccPriceGpu . "kr"; ?></td>
                         <?php
                     }
                 }
@@ -451,10 +452,9 @@
                     if(($ccPriceCpu) > 0) {
                         ?>
                         <td>
-                            <?php echo "Inkl Moms: " . "$ccPriceCpu" . "kr" . "<br>";
-                            echo "Exkl Moms: " . 0.75 * $ccPriceCpu . "kr";
-                            ?>
+                            <?php echo "$ccPriceCpu" . "kr"; ?>
                         </td>
+                        <td><?php echo 0.75 * $ccPriceCpu . "kr"; ?></td>
                         <?php
                     }
                 }
@@ -482,10 +482,9 @@
                     if(($ccPricePsu) > 0) {
                         ?>
                         <td>
-                            <?php echo "Inkl Moms: " . "$ccPricePsu" . "kr" . "<br>";
-                            echo "Exkl Moms: " . 0.75 * $ccPricePsu . "kr";
-                            ?>
+                            <?php echo "$ccPricePsu" . "kr"; ?>
                         </td>
+                        <td><?php echo 0.75 * $ccPricePsu . "kr"; ?></td>
                         <?php
                     }
                 }
@@ -513,10 +512,9 @@
                     if(($ccPriceHdd) > 0) {
                         ?>
                         <td>
-                            <?php echo "Inkl Moms: " . "$ccPriceHdd" . "kr" . "<br>";
-                            echo "Exkl Moms: " . 0.75* $ccPriceHdd . "kr";
-                            ?>
+                            <?php echo "$ccPriceHdd" . "kr"; ?>
                         </td>
+                        <td><?php echo 0.75* $ccPriceHdd . "kr"; ?></td>
                         <?php
                     }
                 }
@@ -543,10 +541,9 @@
                     if(($ccPriceCool) > 0) {
                         ?>
                         <td>
-                            <?php echo "Inkl Moms: " . "$ccPriceCool" . "kr" . "<br>";
-                            echo "Exkl Moms: " . 0.75 * $ccPriceCool . "kr";
-                            ?>
+                            <?php echo "$ccPriceCool" . "kr"; ?>
                         </td>
+                        <td><?php echo 0.75 * $ccPriceCool . "kr"; ?></td>
                         <?php
                     }
                 }
@@ -569,10 +566,9 @@
                 ?>
 
                 <td>
-                    <?php echo "Inkl Moms: " . "$ccValueOther" . "kr" . "<br>";
-                    echo "Exkl Moms: " . 0.75 * $ccValueOther . "kr";
-                    ?>
+                    <?php echo "$ccValueOther" . "kr"; ?>
                 </td>
+                <td><?php echo 0.75 * $ccValueOther . "kr"; ?></td>
 
             </tr>
             <tr>
@@ -582,15 +578,15 @@
                 ?>
                 <td>
                     <?php
-                    echo "<hr><br><br><b>Att betala: </b>";
+                    echo "<hr><b>Att betala: </b>";
                     ?>
                 </td>
                 <td>
                     <?php
-                    echo "<hr>" . "Inkl Moms: " . "$TotalPrice" . "kr" . "<br><br>";
-                    echo "Exkl Moms: " . "$exTotalPrice" . "kr";
+                    echo "<hr>" . "Inkl Moms: " . "$TotalPrice" . "kr";
                     ?>
                 </td>
+                <td><?php echo "<hr>" . "Exkl Moms: " . "$exTotalPrice" . "kr"; ?></td>
             </tr>
         </table>
 
@@ -626,7 +622,7 @@
 
         <hr style="margin-top: 5%;">
 
-        <table class="Info" style="width:100%;">
+        <table class="Info" style="width:100%; margin-bottom: -1%;">
             <tr>
                 <th style="font-size:10px; width: 10%;">Adress</th>
                 <th style="font-size:10px; width: 10%;">Telefon</th>
@@ -647,8 +643,8 @@
             </tr>
         </table>
 
-        <center><p style="font-size: 10px;">INNEHAR F SKATTEBEVIS</p></center>
-        <p style="font-size:13px; text-align: left;">Skapad av Rami Abou Zahra</p>
+        <center><p style="font-size: 10px; bottom: 10%;">INNEHAR F SKATTEBEVIS</p></center>
+        <p style="font-size:10px; text-align: left;">Skapad av Rami Abou Zahra</p>
     </footer>
 </div>
 
