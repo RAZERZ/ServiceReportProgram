@@ -1,3 +1,4 @@
+<div id="beforePrint">
 <?php
 
 $con = mysqli_connect('localhost', 'root', '', 'ServiceRapportProgram');
@@ -21,6 +22,7 @@ if ($result = mysqli_query($con, $query)) { ?>
                 <th>Reparatörens Åtgärd</th>
                 <th>Pris</th>
                 <th>Totalt</th>
+                <th>Skriv Ut</th>
             </tr>
 
 <?php
@@ -193,11 +195,98 @@ if ($result = mysqli_query($con, $query)) { ?>
 
                 print_r("</td><td>" . $row['totalPrice'] . "kr" . "</td>");
 
+$serviceNummer = $row['serviceNummer'];
+$repairName = $row['repairName'];
+$kundensNamn = $row['kNamn'];
+$kundensAdress = $row['kAdress'];
+$kundensMail = $row['kMail'];
+$kundensNummer = $row['kNummer'];
+
+$daCheckMobo = $row['daCheckMobo'];
+$daErrMobo = $row['daErrMobo'];
+$daCheckGpu = $row['daCheckGpu'];
+$daErrGpu = $row['daErrGpu'];
+$daCheckCpu = $row['daCheckCpu'];
+$daErrCpu = $row['daErrCpu'];
+$daCheckPsu = $row['daCheckPsu'];
+$daErrPsu = $row['daErrPsu'];
+$daCheckHdd = $row['daCheckHdd'];
+$daErrHdd = $row['daErrHdd'];
+$daCheckCool = $row['daCheckCool'];
+$daErrCool = $row['daErrCool'];
+$daCheckOther = $row['daCheckOther'];
+$daOtherValue = $row['daOtherValue'];
+$daErrOther = $row['daErrOther'];
+
+$ccCheckSearch = $row['ccCheckSearch'];
+$ccPriceSearch = $row['ccPriceSearch'];
+$ccCheckMobo = $row['ccCheckMobo'];
+$ccPriceMobo = $row['ccPriceMobo'];
+$ccCheckGpu = $row['ccCheckGpu'];
+$ccPriceGpu = $row['ccPriceGpu'];
+$ccCheckCpu = $row['ccCheckCpu'];
+$ccPriceCpu = $row['ccPriceCpu'];
+$ccCheckPsu = $row['ccCheckPsu'];
+$ccPricePsu = $row['ccPricePsu'];
+$ccCheckHdd = $row['ccCheckHdd'];
+$ccPriceHdd = $row['ccPriceHdd'];
+$ccCheckCool = $row['ccCheckCool'];
+$ccPriceCool = $row['ccPriceCool'];
+$ccCheckOther = $row['ccCheckOther'];
+$ccValueOther = $row['ccValueOther'];
+
+?>
+
+<td>
+    <form action="print.php" method="post">
+        <input type="hidden" name="serviceNummer" value='<? echo "$serviceNummer"; ?>'>
+        <input type="hidden" name="repairName" value='<? echo "$repairName"; ?>'>
+        <input type="hidden" name="kundensNamn" value='<? echo "$kundensNamn"; ?>'>
+        <input type="hidden" name="kundensAdress" value='<? echo "$kundensAdress"; ?>'>
+        <input type="hidden" name="kundensMail" value='<? echo "$kundensMail"; ?>'>
+        <input type="hidden" name="kundensNummer" value='<? echo "$kundensNummer"; ?>'>
+
+        <input type="hidden" name="daCheckMobo" value='<? echo "$daCheckMobo"; ?>'>
+        <input type="hidden" name="daErrMobo" value='<? echo "$daErrMobo"; ?>'>
+        <input type="hidden" name="daCheckGpu" value='<? echo "$daCheckGpu"; ?>'>
+        <input type="hidden" name="daErrGpu" value='<? echo "$daErrGpu"; ?>'>
+        <input type="hidden" name="daCheckCpu" value='<? echo "$daCheckCpu"; ?>'>
+        <input type="hidden" name="daErrCpu" value='<? echo "$daErrCpu"; ?>'>
+        <input type="hidden" name="daCheckPsu" value='<? echo "$daCheckPsu"; ?>'>
+        <input type="hidden" name="daErrPsu" value='<? echo "$daErrPsu"; ?>'>
+        <input type="hidden" name="daCheckHdd" value='<? echo "$daCheckHdd"; ?>'>
+        <input type="hidden" name="daErrHdd" value='<? echo "$daErrHdd"; ?>'>
+        <input type="hidden" name="daCheckCool" value='<? echo "$daCheckCool"; ?>'>
+        <input type="hidden" name="daErrCool" value='<? echo "$daErrCool"; ?>'>
+        <input type="hidden" name="daCheckOther" value='<? echo "$daCheckOther"; ?>'>
+        <input type="hidden" name="daOtherValue" value='<? echo "$daOtherValue"; ?>'>
+        <input type="hidden" name="daErrOther" value='<? echo "$daErrOther"; ?>'>
+
+        <input type="hidden" name="ccCheckSearch" value='<? echo "$ccCheckSearch"; ?>'>
+        <input type="hidden" name="ccCheckMobo" value='<? echo "$ccCheckMobo"; ?>'>
+        <input type="hidden" name="ccPriceMobo" value='<? echo "$ccPriceMobo"; ?>'>
+        <input type="hidden" name="ccCheckGpu" value='<? echo "$ccCheckGpu"; ?>'>
+        <input type="hidden" name="ccPriceGpu" value='<? echo "$ccPriceGpu"; ?>'>
+        <input type="hidden" name="ccCheckCpu" value='<? echo "$ccCheckCpu"; ?>'>
+        <input type="hidden" name="ccPriceCpu" value='<? echo "$ccPriceCpu"; ?>'>
+        <input type="hidden" name="ccCheckPsu" value='<? echo "$ccCheckPsu"; ?>'>
+        <input type="hidden" name="ccPricePsu" value='<? echo "$ccPricePsu"; ?>'>
+        <input type="hidden" name="ccCheckHdd" value='<? echo "$ccCheckHdd"; ?>'>
+        <input type="hidden" name="ccPriceHdd" value='<? echo "$ccPriceHdd"; ?>'>
+        <input type="hidden" name="ccCheckCool" value='<? echo "$ccCheckCool"; ?>'>
+        <input type="hidden" name="ccPriceCool" value='<? echo "$ccPriceCool"; ?>'>
+        <input type="hidden" name="ccCheckOther" value='<? echo "$ccCheckOther"; ?>'>
+        <input type="hidden" name="ccValueOther" value='<? echo "$ccValueOther"; ?>'>
+
+        <input type="submit" value="Skriv Ut">
+    </form>
+
+</td>
+
+<?php
         echo "</tr>";
 
     }
-
-    echo "</table></center>";
 
     mysqli_free_result($result);
     

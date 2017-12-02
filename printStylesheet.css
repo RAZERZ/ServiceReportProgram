@@ -1,0 +1,139 @@
+@media screen {
+    #display{display: none;}
+}
+@media print {
+    #footer {
+    }
+
+    #printButton {
+        display: none;
+    }
+
+    #beforePrint {
+        display: none;
+    }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    @media screen {
+        #footer {
+            display: none;
+        }
+
+    }
+
+    #container {
+        min-height: 100%;
+        position: relative;
+    }
+
+    #header {
+        padding: 10px;
+    }
+
+    #body {
+        padding: 10px;
+        padding-bottom: 0%; /* Height of the footer */
+        position: relative;
+        display: block;
+        height: 100%;
+    }
+
+    @page {
+        size: auto;
+        margin: 5mm;
+    }
+
+    .Init-header {
+        margin-left: 45%;
+    }
+
+    .Service-nummer {
+        position: relative;
+        margin-top: -4%;
+        margin-bottom: 1%;
+        left: 11%;
+    }
+
+    .Date {
+        position: relative;
+        margin-top: -6%;
+        right: 11%;
+
+    }
+
+    .Reparator {
+        position: relative;
+        left: 11%;
+    }
+
+    .Kundens-uppgifter {
+        position: relative;
+        margin-top: -4%;
+        margin-bottom: 1%;
+        right: 11%;
+        border-radius: 40%;
+    }
+
+    .Defect-Area {
+        position: relative;
+        width: 78%;
+        margin-top: 2%;
+        margin-left: 11%;
+    }
+
+    .Customer-Choice {
+        position: relative;
+        margin-top: 1%;
+        width: 78%;
+        margin-left: 11%
+    }
+
+    .signatures {
+        display: -webkit-box;
+    }
+
+    .Customer-Signature {
+        position: relative;
+        margin-top: 1%;
+        width: 35%;
+        margin-left: 11%;
+    }
+
+    .Repair-Signature {
+        position: inherit;
+        width: 35%;
+        margin-left: 8%;
+        margin-top: 1%;
+    }
+
+    .Info {
+        width: 100%;
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 15%;
+    }
+
+    td, th {
+        border: 2px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+    #footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
