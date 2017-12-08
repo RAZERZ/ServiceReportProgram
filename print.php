@@ -636,7 +636,7 @@
                 <td style="font-size: 10px;">Sida = www.data-butiken.com<br>Mail = info@data-butiken.com</td>
             </tr>
             <tr>
-                <td style="font-size:10px;">65637</td>
+                <td style="font-size:10px;">65637 Karlstad</td>
                 <td style="font-size:10px;">054-7717366</td>
                 <td style="font-size:10px;">5297-4581</td>
                 <td style="font-size: 10px;">MOMSREGNR = SE630311523901</td>
