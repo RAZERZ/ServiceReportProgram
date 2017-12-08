@@ -392,10 +392,10 @@
 
                     if(($ccPriceMobo) > 0) {
                         ?>
+                        <td><?php echo 0.75 * $ccPriceMobo . "kr"; ?>
                         <td>
                             <?php echo "$ccPriceMobo" . "kr" . "<br>"; ?>
                         </td>
-                        <td><?php echo 0.75 * $ccPriceMobo . "kr"; ?>
                         </td>
                         <?php
                     }
@@ -422,10 +422,10 @@
 
                     if(($ccPriceGpu) > 0) {
                         ?>
-                        <td>
-                            <?php echo "$ccPriceGpu" . "kr"; ?>
-                        </td>
                         <td><?php echo 0.75 * $ccPriceGpu . "kr"; ?></td>
+                        <td>
+                        <?php echo "$ccPriceGpu" . "kr"; ?>
+                        </td>
                         <?php
                     }
                 }
@@ -451,10 +451,10 @@
 
                     if(($ccPriceCpu) > 0) {
                         ?>
-                        <td>
-                            <?php echo "$ccPriceCpu" . "kr"; ?>
-                        </td>
                         <td><?php echo 0.75 * $ccPriceCpu . "kr"; ?></td>
+                        <td>
+                        <?php echo "$ccPriceCpu" . "kr"; ?>
+                        </td>
                         <?php
                     }
                 }
@@ -481,10 +481,10 @@
 
                     if(($ccPricePsu) > 0) {
                         ?>
-                        <td>
-                            <?php echo "$ccPricePsu" . "kr"; ?>
-                        </td>
                         <td><?php echo 0.75 * $ccPricePsu . "kr"; ?></td>
+                        <td>
+                        <?php echo "$ccPricePsu" . "kr"; ?>
+                        </td>
                         <?php
                     }
                 }
@@ -511,10 +511,10 @@
 
                     if(($ccPriceHdd) > 0) {
                         ?>
-                        <td>
-                            <?php echo "$ccPriceHdd" . "kr"; ?>
-                        </td>
                         <td><?php echo 0.75* $ccPriceHdd . "kr"; ?></td>
+                        <td>
+                        <?php echo "$ccPriceHdd" . "kr"; ?>
+                        </td>
                         <?php
                     }
                 }
@@ -540,10 +540,10 @@
 
                     if(($ccPriceCool) > 0) {
                         ?>
-                        <td>
-                            <?php echo "$ccPriceCool" . "kr"; ?>
-                        </td>
                         <td><?php echo 0.75 * $ccPriceCool . "kr"; ?></td>
+                        <td>
+                        <?php echo "$ccPriceCool" . "kr"; ?>
+                        </td>
                         <?php
                     }
                 }
@@ -581,12 +581,12 @@
                     echo "<hr><b>Att betala: </b>";
                     ?>
                 </td>
-                <td>
-                    <?php
-                    echo "<hr>" . "Inkl Moms: " . "$TotalPrice" . "kr";
-                    ?>
-                </td>
                 <td><?php echo "<hr>" . "Exkl Moms: " . "$exTotalPrice" . "kr"; ?></td>
+                <td>
+                <?php
+                echo "<hr>" . "Inkl Moms: " . "$TotalPrice" . "kr";
+                ?>
+                </td>
             </tr>
         </table>
 

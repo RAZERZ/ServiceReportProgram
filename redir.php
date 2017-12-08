@@ -347,8 +347,8 @@
         <table class="Customer-Choice"  border="2">
             <tr>
                 <th>Reparatörens åtgärd:</th>
-                <th>Pris Inkl Moms:</th>
                 <th>Exkl Moms:</th>
+                <th>Pris Inkl Moms:</th>
             </tr>
             <tr>
                 <?php
@@ -393,10 +393,10 @@
                     
                     if(strlen($ccPriceMobo) > 0) {
 ?>
-                        <td>
-                            <?php echo "$ccPriceMobo" . "kr"; ?>
-                        </td>
                         <td><?php echo 0.75 * $ccPriceMobo . "kr"; ?></td>
+                        <td>
+                        <?php echo "$ccPriceMobo" . "kr"; ?>
+                        </td>
 <?php
                     }
                 }
@@ -419,13 +419,13 @@
                 <?php
                 if(isset($_POST['CC-price-gpu'])) {
                     $ccPriceGpu = trim($_POST['CC-price-gpu']);
-                    
+
                     if(strlen($ccPriceGpu) > 0) {
 ?>
+                        <td><?php echo 0.75 * $ccPriceGpu . "kr"; ?></td>
                         <td>
                             <?php echo "$ccPriceGpu" . "kr"; ?>
                         </td>
-                        <td><?php echo 0.75 * $ccPriceGpu . "kr"; ?></td>
 <?php
                     }
                 }
@@ -451,10 +451,10 @@
                     
                     if(strlen($ccPriceCpu) > 0) {
 ?>
-                    <td>
-                        <?php echo "$ccPriceCpu" . "kr"; ?>
-                    </td>
                         <td><?php echo 0.75 * $ccPriceCpu . "kr"; ?></td>
+                        <td>
+                        <?php echo "$ccPriceCpu" . "kr"; ?>
+                        </td>
 <?php
                     }
                 }
@@ -481,10 +481,10 @@
                     
                     if(strlen($ccPricePsu) > 0) {
 ?>
-                    <td>
-                        <?php echo "$ccPricePsu" . "kr"; ?>
-                    </td>
                         <td><?php echo 0.75 * $ccPricePsu . "kr"; ?></td>
+                        <td>
+                        <?php echo "$ccPricePsu" . "kr"; ?>
+                        </td>
 <?php
                     }
                 }
@@ -511,10 +511,10 @@
                     
                     if(strlen($ccPriceHdd) > 0) {
 ?>
-                    <td>
-                        <?php echo "$ccPriceHdd" . "kr"; ?>
-                    </td>
                         <td><?php echo 0.75* $ccPriceHdd . "kr"; ?></td>
+                        <td>
+                        <?php echo "$ccPriceHdd" . "kr"; ?>
+                        </td>
 <?php
                     }
                 }
@@ -540,10 +540,10 @@
                     
                     if(strlen($ccPriceCool) > 0) {
 ?>
-                    <td>
-                        <?php echo "$ccPriceCool" . "kr"; ?>
-                    </td>
                         <td><?php echo 0.75 * $ccPriceCool . "kr"; ?></td>
+                        <td>
+                        <?php echo "$ccPriceCool" . "kr"; ?>
+                        </td>
 <?php
                     }
                 }
@@ -570,10 +570,10 @@
                     
                     if(strlen($ccPriceOther) > 0) {
 ?>
-                    <td>
-                        <?php echo "$ccPriceOther" . "kr"; ?>
-                    </td>
                         <td><?php echo 0.75 * $ccPriceOther . "kr"; ?></td>
+                        <td>
+                        <?php echo "$ccPriceOther" . "kr"; ?>
+                        </td>
 <?php
                     }
                 }
@@ -589,12 +589,12 @@
                     echo "<hr><b>Att betala: </b>";
                     ?>
                 </td>
-                <td>
-                    <?php
-                    echo "<hr>" . "$TotalPrice" . "kr";
-                    ?>
-                </td>
                 <td><?php echo "<hr>" . "$exTotalPrice" . "kr"; ?></td>
+                <td>
+                <?php
+                echo "<hr>" . "$TotalPrice" . "kr";
+                ?>
+                </td>
             </tr>
         </table>
 
@@ -652,7 +652,7 @@
                     <td style="font-size: 10px;">Sida = www.data-butiken.com<br>Mail = info@data-butiken.com</td>
                 </tr>
                 <tr>
-                    <td style="font-size:10px;">65637</td>
+                    <td style="font-size:10px;">65637 Karlstad</td>
                     <td style="font-size:10px;">054-7717366</td>
                     <td style="font-size:10px;">5297-4581</td>
                     <td style="font-size: 10px;">MOMSREGNR = SE630311523901</td>
