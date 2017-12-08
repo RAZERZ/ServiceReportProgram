@@ -12,7 +12,7 @@ CREATE DATABASE ServiceRapportProgram;
 Then, create a table with colums containing the info;
 
 ```SQL
-CREATE TABLE serviceRapport (serviceNummer varchar(255), repairName varchar(255), kNamn varchar(255), kAdress varchar(255), kMail varchar(255), kNummer int, daCheckMobo bit, daErrMobo varchar(255), daCheckGpu bit, daErrGpu varchar(255), daCheckCpu bit, daErrCpu varchar(255), daCheckPsu bit, daErrPsu varchar(255), daCheckHdd bit, daErrHdd varchar(255), daCheckCool bit, daErrCool varchar(255), daCheckOther bit, daOtherValue varchar(255), daErrOther varchar(255), ccCheckSearch bit, ccPriceSearch int, ccCheckMobo bit, ccPriceMobo int, ccCheckGpu bit, ccPriceGpu int, ccCheckCpu bit, ccPriceCpu int, ccCheckPsu bit, ccPricePsu int, ccCheckHdd bit, ccPriceHdd int, ccCheckCool bit, ccPriceCool int, ccCheckOther bit, ccValueOther int, totalPrice int);
+CREATE TABLE serviceRapport (serviceNummer varchar(255), repairName varchar(255), kNamn varchar(255), kAdress varchar(255), kMail varchar(255), kNummer int, daCheckMobo bit, daErrMobo varchar(255), daCheckGpu bit, daErrGpu varchar(255), daCheckCpu bit, daErrCpu varchar(255), daCheckPsu bit, daErrPsu varchar(255), daCheckHdd bit, daErrHdd varchar(255), daCheckCool bit, daErrCool varchar(255), daCheckOther bit, daOtherValue varchar(255), daErrOther varchar(255), ccCheckSearch bit, ccCheckMac bit, ccCheckPC bit, ccCheckMobo bit, ccPriceMobo int, ccCheckGpu bit, ccPriceGpu int, ccCheckCpu bit, ccPriceCpu int, ccCheckPsu bit, ccPricePsu int, ccCheckHdd bit, ccPriceHdd int, ccCheckCool bit, ccPriceCool int, ccCheckOther bit, ccValueOther int, totalPrice int);
 ```
 
 # Todo

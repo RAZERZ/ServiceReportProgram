@@ -356,16 +356,47 @@
                         $ccCheckSearch = trim($_POST['CC-check-search']);
 
                         if (strlen($ccCheckSearch) > 0) {
-                            $ccPriceSearch = "575";
 
                             ?>
                             <td>
                                 <input type="checkbox" <?php echo 'checked="checked"'; ?> /> Felsökning
                             </td>
                             <td>
-                                575kr
+                                <?php
+                                if(strlen($_POST['CC-check-Mac']) > 0) {
+                                    $ccCheckMac = trim($_POST['CC-check-Mac']);
+                                    $ccPriceSearch = 899; ?>
+                                    <input type="checkbox" <?php echo 'checked="checked"'; ?> /> Mac
+                                    <?php
+                                    echo $ccPriceSearch . "kr";
+                                }
+                                if(strlen($_POST['CC-check-PC']) > 0) {
+                                    $ccCheckPC = $_POST['CC-check-PC'];
+                                    $ccPriceSearch = 575; ?>
+                                    <input type="checkbox" <?php echo 'checked="checked"'; ?> /> PC
+                                    <?php
+                                    echo $ccPriceSearch . "kr";
+                                }
+                                ?>
                             </td>
-                            <td>575kr</td>
+                            <td>
+                                <?php
+                                if(strlen($_POST['CC-check-Mac']) > 0) {
+                                    $ccCheckMac = trim($_POST['CC-check-Mac']);
+                                    $ccPriceSearch = 899; ?>
+                                    <input type="checkbox" <?php echo 'checked="checked"'; ?> /> Mac
+                                    <?php
+                                    echo $ccPriceSearch . "kr";
+                                }
+                                if(strlen($_POST['CC-check-PC']) > 0) {
+                                    $ccCheckPC = $_POST['CC-check-PC'];
+                                    $ccPriceSearch = 575; ?>
+                                    <input type="checkbox" <?php echo 'checked="checked"'; ?> /> PC
+                                    <?php
+                                    echo $ccPriceSearch . "kr";
+                                }
+                                ?>
+                            </td>
                             <?php
                         }
                     }
@@ -602,7 +633,7 @@
 
         $con = mysqli_connect('localhost', 'root', '','ServiceRapportProgram') or die(mysqli_error());
 
-        $insertQuery = mysqli_query($con, "INSERT INTO serviceRapport VALUES ('$serviceNummer', '$repairName', '$kundensNamn', '$kundensAdress', '$kundensMail', '$kundensNummer', '$daCheckMobo', '$daErrMobo', '$daCheckGpu', '$daErrGpu', '$daCheckCpu', '$daErrCpu', '$daCheckPsu', '$daErrPsu', '$daCheckHdd', '$daErrHdd', '$daCheckCool', '$daErrCool', '$daCheckOther', '$daOtherValue', '$daErrOther', '$ccCheckSearch', '$ccPriceSearch', '$ccCheckMobo', '$ccPriceMobo', '$ccCheckGpu', '$ccPriceGpu', '$ccCheckCpu',' $ccPriceCpu', '$ccCheckPsu', '$ccPricePsu', '$ccCheckHdd', '$ccPriceHdd', '$ccCheckCool', '$ccPriceCool', '$ccCheckOther', '$ccPriceOther', '$TotalPrice')");
+        $insertQuery = mysqli_query($con, "INSERT INTO serviceRapport VALUES ('$serviceNummer', '$repairName', '$kundensNamn', '$kundensAdress', '$kundensMail', '$kundensNummer', '$daCheckMobo', '$daErrMobo', '$daCheckGpu', '$daErrGpu', '$daCheckCpu', '$daErrCpu', '$daCheckPsu', '$daErrPsu', '$daCheckHdd', '$daErrHdd', '$daCheckCool', '$daErrCool', '$daCheckOther', '$daOtherValue', '$daErrOther', '$ccCheckSearch', '$ccCheckMac', '$ccCheckPC', '$ccCheckMobo', '$ccPriceMobo', '$ccCheckGpu', '$ccPriceGpu', '$ccCheckCpu',' $ccPriceCpu', '$ccCheckPsu', '$ccPricePsu', '$ccCheckHdd', '$ccPriceHdd', '$ccCheckCool', '$ccPriceCool', '$ccCheckOther', '$ccPriceOther', '$TotalPrice')");
 
         ?>
 

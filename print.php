@@ -355,16 +355,46 @@
                     $ccCheckSearch = trim($_POST['ccCheckSearch']);
 
                     if (($ccCheckSearch) > 0) {
-                        $ccPriceSearch = "575";
 
                         ?>
                         <td>
                             <input type="checkbox" <?php echo 'checked="checked"'; ?> /> Felsökning
                         </td>
                         <td>
-                            575kr
+                            <?php
+                            if(($_POST['ccCheckMac']) > 0) {
+                                $ccCheckMac = trim($_POST['ccCheckMac']);
+                                $ccPriceSearch = 899; ?>
+                                <input type="checkbox" <?php echo 'checked="checked"'; ?> /> Mac
+                                <?php
+                                echo $ccPriceSearch . "kr";
+                            }
+                            if(($_POST['ccCheckPC']) > 0) {
+                                $ccCheckPC = $_POST['ccCheckPC'];
+                                $ccPriceSearch = 575; ?>
+                                <input type="checkbox" <?php echo 'checked="checked"'; ?> /> PC
+                                <?php
+                                echo $ccPriceSearch . "kr";
+                            }
+                            ?>
                         </td>
-                        <td>575kr</td>
+                        <td>
+                            <?php
+                            if(($_POST['ccCheckMac']) > 0) {
+                                $ccCheckMac = trim($_POST['ccCheckMac']);
+                                $ccPriceSearch = 899; ?>
+                                <input type="checkbox" <?php echo 'checked="checked"'; ?> /> Mac
+                                <?php
+                                echo $ccPriceSearch . "kr";
+                            }
+                            if(($_POST['ccCheckPC']) > 0) {
+                                $ccCheckPC = $_POST['ccCheckPC'];
+                                $ccPriceSearch = 575; ?>
+                                <input type="checkbox" <?php echo 'checked="checked"'; ?> /> PC
+                                <?php
+                                echo $ccPriceSearch . "kr";
+                            }
+                            ?>
                         <?php
                     }
                 }
@@ -560,15 +590,14 @@
                         <td>
                             <input type="checkbox" <?php echo 'checked="checked"'; ?> /> <?php echo "Annat: " . "$daOtherValue"; ?>
                         </td>
-                        <?php
-                    }
-                }
-                ?>
-
                 <td>
                     <?php echo "$ccValueOther" . "kr"; ?>
                 </td>
                 <td><?php echo 0.75 * $ccValueOther . "kr"; ?></td>
+                <?php
+                    }
+                }
+                ?>
 
             </tr>
             <tr>

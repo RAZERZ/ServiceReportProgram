@@ -114,7 +114,12 @@ if ($result = mysqli_query($con, $query)) { ?>
                 echo "</td><td>";
 
                     if($row['ccCheckSearch'] > 0) {
-                        echo "<ul><li>Felsökning</li></ul>";
+                        if($row['ccCheckMac']) {
+                            echo "<ul><li>Felsökning (Mac)</li></ul>";
+                        }
+                        if($row['ccCheckPC']) {
+                            echo "<ul><li>Felsökning (PC)</li></ul>";
+                        }
                     }
 
                     if($row['ccCheckMobo'] > 0) {
@@ -154,8 +159,12 @@ if ($result = mysqli_query($con, $query)) { ?>
 
                 echo "</td><td>";
 
-                    if($row['ccPriceSearch'] > 0) {
-                        print_r("<ul><li>" . $row['ccPriceSearch'] . "kr" . "</li></ul>");
+                    if($row['ccCheckMac'] > 0) {
+                        print_r("<ul><li>899kr</li></ul>");
+                    }
+
+                    if($row['ccCheckPC'] > 0) {
+                        print_r("<ul><li>575kr</li></ul>");
                     }
 
                     if($row['ccPriceMobo'] > 0) {
@@ -219,7 +228,8 @@ $daOtherValue = $row['daOtherValue'];
 $daErrOther = $row['daErrOther'];
 
 $ccCheckSearch = $row['ccCheckSearch'];
-$ccPriceSearch = $row['ccPriceSearch'];
+$ccCheckMac = $row['ccCheckMac'];
+$ccCheckPC = $row['ccCheckPC'];
 $ccCheckMobo = $row['ccCheckMobo'];
 $ccPriceMobo = $row['ccPriceMobo'];
 $ccCheckGpu = $row['ccCheckGpu'];
@@ -263,6 +273,8 @@ $ccValueOther = $row['ccValueOther'];
         <input type="hidden" name="daErrOther" value='<?php echo "$daErrOther"; ?>'>
 
         <input type="hidden" name="ccCheckSearch" value='<?php echo "$ccCheckSearch"; ?>'>
+        <input type="hidden" name="ccCheckMac" value='<?php echo "$ccCheckMac"; ?>'>
+        <input type="hidden" name="ccCheckPC" value='<?php echo "$ccCheckPC"; ?>'>
         <input type="hidden" name="ccCheckMobo" value='<?php echo "$ccCheckMobo"; ?>'>
         <input type="hidden" name="ccPriceMobo" value='<?php echo "$ccPriceMobo"; ?>'>
         <input type="hidden" name="ccCheckGpu" value='<?php echo "$ccCheckGpu"; ?>'>
