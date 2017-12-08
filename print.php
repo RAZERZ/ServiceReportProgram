@@ -622,28 +622,15 @@
 
         <hr style="margin-top: 5%;">
 
-        <table class="Info" style="width:100%; margin-bottom: -1%;">
-            <tr>
-                <th style="font-size:10px; width: 10%;">Adress</th>
-                <th style="font-size:10px; width: 10%;">Telefon</th>
-                <th style="font-size:10px; width: 10%;">Postgiro</th>
-                <th style="font-size:10px; width: 10%;">Internet</th>
-            </tr>
-            <tr>
-                <td style="font-size:10px;">Frödingshöjd 20</td>
-                <td style="font-size:10px;">054-690000</td>
-                <td style="font-size: 10px;">1222935-7</td>
-                <td style="font-size: 10px;">Sida = www.data-butiken.com<br>Mail = info@data-butiken.com</td>
-            </tr>
-            <tr>
-                <td style="font-size:10px;">65637 Karlstad</td>
-                <td style="font-size:10px;">054-7717366</td>
-                <td style="font-size:10px;">5297-4581</td>
-                <td style="font-size: 10px;">MOMSREGNR = SE630311523901</td>
-            </tr>
-        </table>
+        <center><table class="Info" style="width:100%; margin-bottom: -1%;">
+                <tr>
+                    <td style="font-size:12px; width: 10%; border: 0px solid #ffffff;">Adress<br>Frödingshöjd 20<br>65637 Karlstad<br><br><br><br></td>
+                    <td style="font-size:12px; width: 10%; border: 0px solid #ffffff;">Telefon<br>054-690000<br>Fax<br>054-691450<br><br><br></td>
+                    <td style="font-size:12px; width: 10%; border: 0px solid #ffffff;">Postgiro<br>1222935-7<br>Bankgiro<br>5297-4581<br>Organisationsnr<br>19630311-5239<br><br></td>
+                    <td style="font-size:12px; width: 10%; border: 0px solid #ffffff;">Internet<br>www.data-butiken.com<br>E-post<br>info@data-butiken.com<br>Momsreg.nr<br>SE630311523901<br>Innehar F-skattebevis</td>
+                </tr>
+            </table></center>
 
-        <center><p style="font-size: 10px; bottom: 10%;">INNEHAR F SKATTEBEVIS</p></center>
         <p style="font-size:10px; text-align: left;">Skapad av Rami Abou Zahra</p>
     </footer>
 </div>

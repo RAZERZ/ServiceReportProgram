@@ -5,8 +5,8 @@ html, body {
 }
 
 @media screen {
-    #footer{display: none;}
-
+    #footer{
+    }
 }
 
 #container {
@@ -96,7 +96,7 @@ html, body {
 }
 
 .Info {
-    width: 100%;
+    width: 78%;
 }
 
 table {
