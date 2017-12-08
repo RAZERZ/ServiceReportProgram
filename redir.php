@@ -16,7 +16,7 @@
         <div id="body">
     <body>
         
-        <center><img src="http://www.data-butiken.com/public/img/user/databutikenlogo019.png" style="margin-top: -4%;"></center>
+        <center><img src="http://www.data-butiken.com/public/img/user/originaldatabutikenlogo.png" style="margin-top: -4%;"></center>
         
         <p class="Init-header" style="font-size:20px;"><b><u>Servicerapport</u></b></p>
 
@@ -46,6 +46,9 @@
                 <td><?php echo date("Y-m-d"); ?></td>
             </tr>
         </table>
+
+        <img src="https://www.ehandelscertifiering.se/lv5/logotyp.php?size=75&bg=&lang=sv&url=www.data-butiken.com" style="position: absolute; margin-left: 28%; margin-top: -7%;">
+        <img src="http://www.data-butiken.com/public/img/user/qrcode.39689118.png" style="position: absolute; margin-left: 63%; margin-top: -9%; width: 7%;">
         
         <table class="Reparator" border="2">
             <tr>

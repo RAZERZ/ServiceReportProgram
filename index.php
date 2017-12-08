@@ -13,7 +13,7 @@
         
         <!-- Top items -->
         
-        <center><img src="http://www.data-butiken.com/public/img/user/databutikenlogo019.png" style="margin-top: -1%;"></center>
+        <center><img src="http://www.data-butiken.com/public/img/user/originaldatabutikenlogo.png" style="margin-top: -1%;"></center>
         
         <table class="Date" border="1" align="right">
             <tr>
@@ -27,6 +27,9 @@
                 </td>
             </tr>
         </table>
+
+        <img src="https://www.ehandelscertifiering.se/lv5/logotyp.php?size=75&bg=&lang=sv&url=www.data-butiken.com" style="position: absolute; margin-left: 64%; margin-top: 0%;">
+        <img src="http://www.data-butiken.com/public/img/user/qrcode.39689118.png" style="position: absolute; margin-left: 63%; margin-top: 7%; width: 7%;">
         
         <p class="Init-header" style=font-size:20px;><b><u>Servicerapport</u></b></p>
         
