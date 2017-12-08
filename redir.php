@@ -660,6 +660,15 @@
     </body>
         </div>
 
+        <table class="comment" border="2">
+            <tr>
+                <th>Kommentar:</th>
+            </tr>
+            <tr>
+                <td><br><br></td>
+            </tr>
+        </table>
+
         </div>
 
         <button id="printButton" style="float:right; margin-top: 1%; margin-bottom: 1%;" onclick="window.print();">Skriv Ut</button>

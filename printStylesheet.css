@@ -131,6 +131,12 @@
         background-color: #dddddd;
     }
 
+    .comment {
+        margin-top: 1%;
+        width: 78%;
+        margin-left: 11%;
+    }
+
     #footer {
         position: absolute;
         bottom: 0;

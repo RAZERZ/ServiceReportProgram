@@ -6,6 +6,7 @@ html, body {
 
 @media screen {
     #footer{
+        display: none;
     }
 }
 
@@ -118,6 +119,12 @@ tr:nth-child(even) {
 @media print {
     #footer{}
     #printButton{display: none;}
+}
+
+.comment {
+    margin-top: 1%;
+    width: 78%;
+    margin-left: 11%;
 }
 
 #footer {
