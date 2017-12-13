@@ -42,7 +42,7 @@
                 <th>Datum</th>
             </tr>
             <tr>
-                <td><?php echo date("Y-m-d"); ?></td>
+                <td><?php echo date("Y-m-d"); ?><br><br></td>
             </tr>
         </table>
 
