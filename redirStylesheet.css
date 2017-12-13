@@ -48,7 +48,6 @@ html, body {
     position: relative;
     margin-top: -8%;
     right: 11%;
-
 }
 
 .Reparator {
@@ -58,15 +57,15 @@ html, body {
 
 .Kundens-uppgifter {
     position: relative;
-    margin-top: -7%;
-    margin-bottom: 1%;
+    margin-top: -11%;
+    margin-bottom: -1%;
     right: 11%;
 }
 
 .Defect-Area {
     position: relative;
     width: 78%;
-    margin-top: 2%;
+    margin-top: 1%;
     margin-left: 11%;
 }
 

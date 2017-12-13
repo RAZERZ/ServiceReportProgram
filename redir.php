@@ -48,7 +48,7 @@
         </table>
 
         <img src="https://www.ehandelscertifiering.se/lv5/logotyp.php?size=75&bg=&lang=sv&url=www.data-butiken.com" style="position: absolute; margin-left: 28%; margin-top: -7%;">
-        <img src="http://www.data-butiken.com/public/img/user/qrcode.39689118.png" style="position: absolute; margin-left: 63%; margin-top: -9%; width: 7%;">
+        <img src="http://www.data-butiken.com/public/img/user/qrcode.39689118.png" style="position: absolute; margin-left: 63%; margin-top: -6%; width: 7%;">
         
         <table class="Reparator" border="2">
             <tr>
@@ -681,7 +681,7 @@
 
             <hr style="margin-top: 5%;">
 
-            <center><table class="Info" style="width:100%; margin-bottom: -1%;">
+            <center><table border="2" class="Info" style="width:100%; margin-bottom: -1%;">
                 <tr>
                     <td style="font-size:12px; width: 10%; border: 0px solid #ffffff;">Adress<br>Frödingshöjd 20<br>65637 Karlstad<br><br><br><br></td>
                     <td style="font-size:12px; width: 10%; border: 0px solid #ffffff;">Telefon<br>054-690000<br>Fax<br>054-691450<br><br><br></td>
