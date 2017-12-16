@@ -23,6 +23,7 @@ if ($result = mysqli_query($con, $query)) { ?>
                 <th>Pris</th>
                 <th>Totalt</th>
                 <th>Skriv Ut</th>
+                <th>Notis</th>
             </tr>
 
 <?php
@@ -294,7 +295,17 @@ $ccValueOther = $row['ccValueOther'];
     </form>
 
 </td>
-
+            <td>
+                <form method="post" action="mailer.php">
+                    <input type="hidden" name="serviceNummer" value='<?php echo "$serviceNummer"; ?>'>
+                    <input type="hidden" name="repairName" value='<?php echo "$repairName"; ?>'>
+                    <input type="hidden" name="kundensNamn" value='<?php echo "$kundensNamn"; ?>'>
+                    <input type="hidden" name="kundensAdress" value='<?php echo "$kundensAdress"; ?>'>
+                    <input type="hidden" name="kundensMail" value='<?php echo "$kundensMail"; ?>'>
+                    <input type="hidden" name="kundensNummer" value='<?php echo "$kundensNummer"; ?>'>
+                    <input type="submit" value="Mail">
+                </form>
+            </td>
 <?php
         echo "</tr>";
 
