@@ -17,15 +17,14 @@ try {
 
     $mail->CharSet = "UTF-8";
     $mail->isSMTP();
-    $mail->Host = 'SMTP_Host';
+    $mail->Host = ''; //Smtp host
     $mail->SMTPAuth = true;
-    $mail->Username = 'Mail_Adress';
-    $mail->Password = 'Mail_Passwd';
+    $mail->Username = ''; //Smtp mail address
+    $mail->Password = ''; //Smtp mail address passwd
     $mail->SMTPSecure = 'tls';
-    $mail->Port = Port_Number;
+    $mail->Port = 2525;
 
-    $mail->setFrom('Mail_Adress'); //You are free to choose any mail adress which is hosted by the same smtp server
-
+    $mail->setFrom(''); //Smtp mail address
     $mail->addAddress("$kundensMail");
 
 
@@ -35,12 +34,27 @@ try {
 
     $mail->send();
 
-    echo "Meddelande skickat!<br>";
-    echo "Klicka <a href=tables.php> här</a> för att gå tillbaka till databasen eller klicka <a href='index.php'> här</a> för att komma till formuläret.";
+?>
+    <center>
+    <table border="1" style="width: 78%; height: 12%;">
+        <tr>
+            <th style="font-size: xx-large; color: red;">Meddelande skickat!</th>
+        </tr>
+    </table>
+
+        <table border="1" style="width: 78%; height: 8%;">
+            <tr>
+                <th style="padding: 1%;"><a href="tables.php"><input type="button" value="Klicka här för att komma till databasen" style="padding: 2%; font-size: 80%; width: 100%;"></a></th>
+                <th style="padding: 1%;"><a href="index.php"><input type="button" value="Klicka här för att komma till formuläret" style="padding: 2%; font-size: 80%; width: 100%;"></a></th>
+            </tr>
+        </table>
+
+<?php
+
 }
 catch (Exception $e) {
-    echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
+    echo 'Meddelanded kunde ej skickas.';
+    echo 'Mail fel: ' . $mail->ErrorInfo;
 }
 
 ?>

@@ -211,6 +211,7 @@ $kundensNamn = $row['kNamn'];
 $kundensAdress = $row['kAdress'];
 $kundensMail = $row['kMail'];
 $kundensNummer = $row['kNummer'];
+$totalPrice = $row['totalPrice'];
 
 $daCheckMobo = $row['daCheckMobo'];
 $daErrMobo = $row['daErrMobo'];
@@ -303,6 +304,23 @@ $ccValueOther = $row['ccValueOther'];
                     <input type="hidden" name="kundensAdress" value='<?php echo "$kundensAdress"; ?>'>
                     <input type="hidden" name="kundensMail" value='<?php echo "$kundensMail"; ?>'>
                     <input type="hidden" name="kundensNummer" value='<?php echo "$kundensNummer"; ?>'>
+                    <input type="hidden" name="totalPrice" value='<?php echo "$totalPrice"; ?>'>
+
+                    <input type="hidden" name="ccCheckMobo" value='<?php echo "$ccCheckMobo"; ?>'>
+                    <input type="hidden" name="ccPriceMobo" value='<?php echo "$ccPriceMobo"; ?>'>
+                    <input type="hidden" name="ccCheckGpu" value='<?php echo "$ccCheckGpu"; ?>'>
+                    <input type="hidden" name="ccPriceGpu" value='<?php echo "$ccPriceGpu"; ?>'>
+                    <input type="hidden" name="ccCheckCpu" value='<?php echo "$ccCheckCpu"; ?>'>
+                    <input type="hidden" name="ccPriceCpu" value='<?php echo "$ccPriceCpu"; ?>'>
+                    <input type="hidden" name="ccCheckPsu" value='<?php echo "$ccCheckPsu"; ?>'>
+                    <input type="hidden" name="ccPricePsu" value='<?php echo "$ccPricePsu"; ?>'>
+                    <input type="hidden" name="ccCheckHdd" value='<?php echo "$ccCheckHdd"; ?>'>
+                    <input type="hidden" name="ccPriceHdd" value='<?php echo "$ccPriceHdd"; ?>'>
+                    <input type="hidden" name="ccCheckCool" value='<?php echo "$ccCheckCool"; ?>'>
+                    <input type="hidden" name="ccPriceCool" value='<?php echo "$ccPriceCool"; ?>'>
+                    <input type="hidden" name="ccCheckOther" value='<?php echo "$ccCheckOther"; ?>'>
+                    <input type="hidden" name="daOtherValue" value='<?php echo "$daOtherValue"; ?>'>
+                    <input type="hidden" name="ccValueOther" value='<?php echo "$ccValueOther"; ?>'>
                     <input type="submit" value="Mail">
                 </form>
             </td>
