@@ -29,6 +29,7 @@ $ccPriceCool = $_POST['ccPriceCool'];
 $ccCheckOther = $_POST['ccCheckOther'];
 $daOtherValue = $_POST['daOtherValue'];
 $ccValueOther = $_POST['ccValueOther'];
+$ccPriceOther = $_POST['ccPriceOther'];
 
 ?>
 
@@ -125,7 +126,7 @@ $ccValueOther = $_POST['ccValueOther'];
 
                             ($ccCheckCool > 0 ? "Kylaren. Pris: " . $ccPriceCool:'');
 
-                            ($ccCheckOther > 0 ? $daOtherValue . ". Pris: " . $ccValueOther:'');
+                            ($ccCheckOther > 0 ? $ccValueOther . ". Pris: " . $ccPriceOther:'');
 
                             echo "\n\nDen totala kostnaden blir " . $totalPrice . "kr inklusive kostnad på felsökning.\n\nVill du att vi ska genomföra reparationen?" . "\n\nKontakta oss angående val med ditt service nummer via antingen telefon (054 690 000) eller mail (servicerapport@data-butiken.com).";
                         ;
@@ -161,8 +162,8 @@ $ccValueOther = $_POST['ccValueOther'];
                     <input type="hidden" name="ccCheckCool" value='<?php echo "$ccCheckCool"; ?>'>
                     <input type="hidden" name="ccPriceCool" value='<?php echo "$ccPriceCool"; ?>'>
                     <input type="hidden" name="ccCheckOther" value='<?php echo "$ccCheckOther"; ?>'>
-                    <input type="hidden" name="daOtherValue" value='<?php echo "$daOtherValue"; ?>'>
                     <input type="hidden" name="ccValueOther" value='<?php echo "$ccValueOther"; ?>'>
+                    <input type="hidden" name="ccPriceOther" value='<?php echo "$ccPriceOther"; ?>'>
                 <input type="submit" value="Skicka" style="margin-top: 3%; width: 100%; height: 30px;">
                 </form>
             </td>

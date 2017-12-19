@@ -587,16 +587,17 @@
                 if(isset($_POST['ccCheckOther'])) {
                     $ccCheckOther = trim($_POST['ccCheckOther']);
                     $ccValueOther = trim($_POST['ccValueOther']);
+                    $ccPriceOther = trim($_POST['ccPriceOther']);
 
-                    if(($ccCheckOther) > 0) {
+                    if(($ccPriceOther) > 0) {
                         ?>
                         <td>
-                            <input type="checkbox" <?php echo 'checked="checked"'; ?> /> <?php echo "Annat: " . "$daOtherValue"; ?>
+                            <input type="checkbox" <?php echo 'checked="checked"'; ?> /> <?php echo "Annat: " . "$ccValueOther"; ?>
                         </td>
                 <td>
-                    <?php echo "$ccValueOther" . "kr"; ?>
+                    <?php echo "$ccPriceOther" . "kr"; ?>
                 </td>
-                <td><?php echo 0.75 * $ccValueOther . "kr"; ?></td>
+                <td><?php echo 0.75 * $ccPriceOther . "kr"; ?></td>
                 <?php
                     }
                 }
@@ -605,7 +606,7 @@
             </tr>
             <tr>
                 <?php
-                $TotalPrice = $ccPriceSearch + $ccValueOther + $ccPriceCool + $ccPriceHdd + $ccPricePsu + $ccPriceCpu + $ccPriceGpu + $ccPriceMobo;
+                $TotalPrice = $ccPriceSearch + $ccPriceOther + $ccPriceCool + $ccPriceHdd + $ccPricePsu + $ccPriceCpu + $ccPriceGpu + $ccPriceMobo;
                 $exTotalPrice = $ccPriceSearch + (0.75 * $ccPriceOther) + (0.75 * $ccPriceCool) + (0.75 * $ccPriceHdd) + (0.75 * $ccPricePsu) + (0.75 * $ccPriceCpu) + (0.75 * $ccPriceGpu) + (0.75 * $ccPriceMobo);
                 ?>
                 <td>
@@ -613,12 +614,8 @@
                     echo "<hr><b>Att betala: </b>";
                     ?>
                 </td>
+                <td><?php echo "<hr>" . "Inkl Moms: " . "$TotalPrice" . "kr"; ?></td>
                 <td><?php echo "<hr>" . "Exkl Moms: " . "$exTotalPrice" . "kr"; ?></td>
-                <td>
-                <?php
-                echo "<hr>" . "Inkl Moms: " . "$TotalPrice" . "kr";
-                ?>
-                </td>
             </tr>
         </table>
 

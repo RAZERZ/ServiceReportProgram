@@ -154,7 +154,7 @@ if ($result = mysqli_query($con, $query)) { ?>
                     }
 
                     if($row['ccCheckOther'] > 0) {
-                        print_r("<ul><li>" . $row['daOtherValue'] . "</li></ul>");
+                        print_r("<ul><li>" . $row['ccValueOther'] . "</li></ul>");
 
                     }
 
@@ -198,8 +198,8 @@ if ($result = mysqli_query($con, $query)) { ?>
 
                     }
 
-                    if($row['ccValueOther'] > 0) {
-                        print_r("<ul><li>" . $row['ccValueOther'] . "kr" . "</li></ul>");
+                    if($row['ccPriceOther'] > 0) {
+                        print_r("<ul><li>" . $row['ccPriceOther'] . "kr" . "</li></ul>");
 
                     }
 
@@ -246,6 +246,7 @@ $ccCheckCool = $row['ccCheckCool'];
 $ccPriceCool = $row['ccPriceCool'];
 $ccCheckOther = $row['ccCheckOther'];
 $ccValueOther = $row['ccValueOther'];
+$ccPriceOther = $row['ccPriceOther'];
 
 ?>
 
@@ -291,6 +292,7 @@ $ccValueOther = $row['ccValueOther'];
         <input type="hidden" name="ccPriceCool" value='<?php echo "$ccPriceCool"; ?>'>
         <input type="hidden" name="ccCheckOther" value='<?php echo "$ccCheckOther"; ?>'>
         <input type="hidden" name="ccValueOther" value='<?php echo "$ccValueOther"; ?>'>
+        <input type="hidden" name="ccPriceOther" value='<?php echo "$ccPriceOther"; ?>'>
 
         <input type="submit" value="Skriv Ut">
     </form>
@@ -319,8 +321,8 @@ $ccValueOther = $row['ccValueOther'];
                     <input type="hidden" name="ccCheckCool" value='<?php echo "$ccCheckCool"; ?>'>
                     <input type="hidden" name="ccPriceCool" value='<?php echo "$ccPriceCool"; ?>'>
                     <input type="hidden" name="ccCheckOther" value='<?php echo "$ccCheckOther"; ?>'>
-                    <input type="hidden" name="daOtherValue" value='<?php echo "$daOtherValue"; ?>'>
-                    <input type="hidden" name="ccValueOther" value='<?php echo "$ccValueOther"; ?>'>
+                    <input type="hidden" name="daOtherValue" value='<?php echo "$ccValueOther"; ?>'>
+                    <input type="hidden" name="ccValueOther" value='<?php echo "$ccPriceOther"; ?>'>
                     <input type="submit" value="Mail">
                 </form>
             </td>
