@@ -1,3 +1,7 @@
+<?php
+error_reporting(E_ALL & ~E_NOTICE);
+
+?>
 <!DOCTYPE HTML>
 
 <html>
@@ -671,6 +675,7 @@
 
         <p style="font-size:10px; text-align: left;">Skapad av Rami Abou Zahra</p>
     </footer>
+
 </div>
 
 </div>

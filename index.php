@@ -1,40 +1,61 @@
-<!DOCTYPE html>
+<?php
+error_reporting(E_ALL & ~E_NOTICE);
 
-<html>
-    
+session_start();
+$sessionID = $_SESSION['userid'];
+if(!empty($sessionID)) {
+    $user = mysqli_fetch_assoc(mysqli_query(mysqli_connect('localhost', 'root', '', 'ServiceRapportProgram'), "SELECT name FROM login WHERE userid = '$sessionID'"))['name'];
+    ?>
+    <!DOCTYPE html>
+
+    <html>
+
     <head>
-        
+
         <title>Service Rapport Program</title>
         <link rel="stylesheet" type="text/css" href="Stylesheet.css" media="all">
-        
-    </head>
-    
-    <body>
-        
-        <!-- Top items -->
-        
-        <center><img src="http://www.data-butiken.com/public/img/user/originaldatabutikenlogo.png" style="margin-top: -1%;"></center>
-        
-        <table class="Date" border="1" align="right">
-            <tr>
-                <th>Datum</th>
-            </tr>
-            <tr>
-                <td>
-                    <?php
-                        echo date("Y-m-d");
-                    ?>
-                </td>
-            </tr>
-        </table>
 
-        <img src="https://www.ehandelscertifiering.se/lv5/logotyp.php?size=75&bg=&lang=sv&url=www.data-butiken.com" style="position: absolute; margin-left: 64%; margin-top: 0%;">
-        <img src="http://www.data-butiken.com/public/img/user/qrcode.39689118.png" style="position: absolute; margin-left: 63%; margin-top: 7%; width: 7%;">
-        
-        <p class="Init-header" style=font-size:20px;><b><u>Servicerapport</u></b></p>
-        
-        <form method="post" action="redir.php">
-        
+    </head>
+
+    <body>
+
+    <!-- Top items -->
+
+    <center><img src="http://www.data-butiken.com/public/img/user/originaldatabutikenlogo.png" style="margin-top: -1%;">
+    </center>
+
+    <form action="" method="post">
+        <input type="submit" name="logout" value="Logout" style="position: relative; left: 10%;">
+    </form>
+    <?php
+    if(isset($_POST['logout'])) {
+        session_unset();
+        session_destroy();
+        header("Location: login.php");
+    }
+?>
+    <table class="Date" border="1" align="right">
+        <tr>
+            <th>Datum</th>
+        </tr>
+        <tr>
+            <td>
+                <?php
+                echo date("Y-m-d");
+                ?>
+            </td>
+        </tr>
+    </table>
+
+    <img src="https://www.ehandelscertifiering.se/lv5/logotyp.php?size=75&bg=&lang=sv&url=www.data-butiken.com"
+         style="position: absolute; margin-left: 64%; margin-top: 0%;">
+    <img src="http://www.data-butiken.com/public/img/user/qrcode.39689118.png"
+         style="position: absolute; margin-left: 63%; margin-top: 7%; width: 7%;">
+
+    <p class="Init-header" style=font-size:20px;><b><u>Servicerapport</u></b></p>
+
+    <form method="post" action="redir.php">
+
         <table class="Kundens-uppgifter" border="1" align="left">
             <tr>
                 <th>Kundens namn:</th>
@@ -44,7 +65,7 @@
             </tr>
             <tr>
                 <td>
-                    <input class="KU-input" type="text" name="Kundens-namn" />
+                    <input class="KU-input" type="text" name="Kundens-namn"/>
                 </td>
                 <td>
                     <input type="text" name="Kundens-adress">
@@ -57,18 +78,16 @@
                 </td>
             </tr>
         </table>
-                
+
         <table class="Reparator" border="1" align="right">
             <tr>
                 <th>Ansvarig Reparatör</th>
             </tr>
             <tr>
-                <td>
-                    <input type="text" name="Reparatorens-namn" />
-                </td>
+                <td><?php echo $user; ?></td>
             </tr>
         </table>
-        
+
         <table class="Defect-Area" border="1">
             <tr>
                 <th>Problemet finns i:</th>
@@ -117,7 +136,7 @@
                 <td>Felbeskrivning: <input type="text" name="DA-err-other"></td>
             </tr>
         </table>
-                
+
         <table class="Customer-Choice" border="1">
             <tr>
                 <th>Reparatörens åtgärd:</th>
@@ -187,12 +206,17 @@
                 </td>
             </tr>
         </table>
-            
-            <input type="submit" value="Skicka" style="float: right; margin-bottom: 1%;">
-            <br>
-            </form>
+
+        <input type="submit" value="Skicka" style="float: right; margin-bottom: 1%;">
+        <br>
+    </form>
 
     </body>
-    
+
     <footer>
-</html>
+    </html>
+    <?php
+}
+else {
+    echo "You need to log in first. <a href='login.php'>Login</a>";
+}

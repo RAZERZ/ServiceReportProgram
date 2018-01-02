@@ -40,26 +40,30 @@ html, body {
 .Service-nummer {
     position: relative;
     margin-top: -4%;
-    margin-bottom: 1%;
+    margin-bottom: -2%;
     left: 11%;
 }
 
 .Date {
     position: relative;
-    margin-top: -11%;
+    margin-top: -5%;
     right: 11%;
 }
 
 .Reparator {
-    position: relative;
-    left: 11%;
+    position: absolute;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    right: 11%;
+    width: 15%;
 }
 
 .Kundens-uppgifter {
     position: relative;
-    margin-top: -6%;
-    margin-bottom: -1%;
-    right: 11%;
+    margin-left: 11%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    width: 47%;
 }
 
 .Defect-Area {

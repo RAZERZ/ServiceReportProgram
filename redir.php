@@ -1,3 +1,12 @@
+<?php
+error_reporting(E_ALL & ~E_NOTICE);
+
+session_start();
+$sessionID = $_SESSION['userid'];
+if(!empty($sessionID)) {
+$user = mysqli_fetch_assoc(mysqli_query(mysqli_connect('localhost', 'root', '', 'ServiceRapportProgram'), "SELECT name FROM login WHERE userid = '$sessionID'"))['name'];
+?>
+
 <!DOCTYPE HTML>
 
 <html>
@@ -43,34 +52,14 @@
                 <th>Datum</th>
             </tr>
             <tr>
-                <td><?php echo date("Y-m-d"); ?><br><br></td>
+                <td><?php echo date("Y-m-d"); ?></td>
             </tr>
         </table>
 
-        <img src="https://www.ehandelscertifiering.se/lv5/logotyp.php?size=75&bg=&lang=sv&url=www.data-butiken.com" style="position: absolute; margin-left: 28%; margin-top: -7%;">
-        <img src="http://www.data-butiken.com/public/img/user/qrcode.39689118.png" style="position: absolute; margin-left: 63%; margin-top: -6%; width: 7%;">
-        
-        <table class="Reparator" border="2">
-            <tr>
-                <th>Ansvarig Reparatör</th>
-            </tr>
-            <tr>
-                <td>
-                    <?php
-                    if(isset($_POST['Reparatorens-namn'])) {
-                        $repairName = trim($_POST['Reparatorens-namn']);
-                        
-                        if(strlen($repairName) > 0) {
-                            echo "$repairName";
-                        }
-                    }
-                    ?>
-                </td>
+        <img src="https://www.ehandelscertifiering.se/lv5/logotyp.php?size=75&bg=&lang=sv&url=www.data-butiken.com" style="position: absolute; margin-left: 36%; margin-top: -5%;">
+        <img src="http://www.data-butiken.com/public/img/user/qrcode.39689118.png" style="position: absolute; margin-left: 56%; margin-top: -5%; width: 7%;">
 
-            </tr>
-        </table>
-        
-        <table class="Kundens-uppgifter" border="2" align="right">
+        <table class="Kundens-uppgifter" border="2" align="left">
             <tr>
                 <th>Kundens namn:</th>
                 <th>Adress:</th>
@@ -81,59 +70,71 @@
                 <?php
                 if(isset($_POST['Kundens-namn'])) {
                     $kundensNamn = trim($_POST['Kundens-namn']);
-                    
+
                     if(strlen($kundensNamn) > 0) {
-?>
+                        ?>
                         <td>
-                        <?php echo "$kundensNamn"; ?>
+                            <?php echo "$kundensNamn"; ?>
                         </td>
-<?php
+                        <?php
                     }
                 }
                 ?>
                 <?php
                 if(isset($_POST['Kundens-adress'])) {
                     $kundensAdress = trim($_POST['Kundens-adress']);
-                    
+
                     if(strlen($kundensAdress) > 0) {
-?>
-                    <td>
-                        <?php echo "$kundensAdress"; ?>
-                    </td>
-<?php
+                        ?>
+                        <td>
+                            <?php echo "$kundensAdress"; ?>
+                        </td>
+                        <?php
                     }
                 }
                 ?>
                 <?php
                 if(isset($_POST['Kundens-mail'])) {
                     $kundensMail = trim($_POST['Kundens-mail']);
-                    
+
                     if(strlen($kundensMail) > 0) {
-?>
-                    <td>
-                        <?php echo "$kundensMail"; ?>
-                    </td>
-<?php
+                        ?>
+                        <td>
+                            <?php echo "$kundensMail"; ?>
+                        </td>
+                        <?php
                     }
                 }
                 ?>
                 <?php
                 if(isset($_POST['Kundens-nummer'])){
                     $kundensNummer = trim($_POST['Kundens-nummer']);
-                    
+
                     if(strlen($kundensNummer) > 0) {
-?>
-                    <td>
-                        <?php echo "$kundensNummer"; ?>
-                    </td>
-<?php
+                        ?>
+                        <td>
+                            <?php echo "$kundensNummer"; ?>
+                        </td>
+                        <?php
                     }
                 }
                 ?>
             </tr>
         </table>
-        
-        
+        <table class="Reparator" border="2">
+            <tr>
+                <th>Ansvarig Reparatör</th>
+            </tr>
+            <tr>
+                <td>
+                    <?php echo $user; ?>
+                </td>
+
+            </tr>
+        </table>
+
+
+
         <table class="Defect-Area" border="2">
             <tr>
                 <th>Problemet finns i:</th>
@@ -615,8 +616,8 @@
             </tr>
             <tr>
                 <?php
-                $TotalPrice = $ccPriceSearch + $ccPriceOther + $ccPriceCool + $ccPriceHdd + $ccPricePsu + $ccPriceCpu + $ccPriceGpu + $ccPriceMobo;
-                $exTotalPrice = $ccPriceSearch + (0.75 * $ccPriceOther) + (0.75 * $ccPriceCool) + (0.75 * $ccPriceHdd) + (0.75 * $ccPricePsu) + (0.75 * $ccPriceCpu) + (0.75 * $ccPriceGpu) + (0.75 * $ccPriceMobo);
+                @$TotalPrice = $ccPriceSearch + $ccPriceOther + $ccPriceCool + $ccPriceHdd + $ccPricePsu + $ccPriceCpu + $ccPriceGpu + $ccPriceMobo;
+                @$exTotalPrice = $ccPriceSearch + (0.75 * $ccPriceOther) + (0.75 * $ccPriceCool) + (0.75 * $ccPriceHdd) + (0.75 * $ccPricePsu) + (0.75 * $ccPriceCpu) + (0.75 * $ccPriceGpu) + (0.75 * $ccPriceMobo);
                 ?>
                 <td>
                     <?php
@@ -636,7 +637,7 @@
 
         $con = mysqli_connect('localhost', 'root', '','ServiceRapportProgram') or die(mysqli_error());
 
-        $insertQuery = mysqli_query($con, "INSERT INTO serviceRapport VALUES ('$serviceNummer', '$repairName', '$kundensNamn', '$kundensAdress', '$kundensMail', '$kundensNummer', '$daCheckMobo', '$daErrMobo', '$daCheckGpu', '$daErrGpu', '$daCheckCpu', '$daErrCpu', '$daCheckPsu', '$daErrPsu', '$daCheckHdd', '$daErrHdd', '$daCheckCool', '$daErrCool', '$daCheckOther', '$daOtherValue', '$daErrOther', '$ccCheckSearch', '$ccCheckMac', '$ccCheckPC', '$ccCheckMobo', '$ccPriceMobo', '$ccCheckGpu', '$ccPriceGpu', '$ccCheckCpu',' $ccPriceCpu', '$ccCheckPsu', '$ccPricePsu', '$ccCheckHdd', '$ccPriceHdd', '$ccCheckCool', '$ccPriceCool', '$ccCheckOther', '$ccValueOther', '$ccPriceOther', '$TotalPrice')");
+        $insertQuery = mysqli_query($con, "INSERT INTO serviceRapport VALUES ('$serviceNummer', '$user', '$kundensNamn', '$kundensAdress', '$kundensMail', '$kundensNummer', '$daCheckMobo', '$daErrMobo', '$daCheckGpu', '$daErrGpu', '$daCheckCpu', '$daErrCpu', '$daCheckPsu', '$daErrPsu', '$daCheckHdd', '$daErrHdd', '$daCheckCool', '$daErrCool', '$daCheckOther', '$daOtherValue', '$daErrOther', '$ccCheckSearch', '$ccCheckMac', '$ccCheckPC', '$ccCheckMobo', '$ccPriceMobo', '$ccCheckGpu', '$ccPriceGpu', '$ccCheckCpu',' $ccPriceCpu', '$ccCheckPsu', '$ccPricePsu', '$ccCheckHdd', '$ccPriceHdd', '$ccCheckCool', '$ccPriceCool', '$ccCheckOther', '$ccValueOther', '$ccPriceOther', '$TotalPrice')");
 
         ?>
 
@@ -697,3 +698,8 @@
     </div>
 
 </html>
+<?php
+}
+else {
+    echo "You need to log in first. <a href='login.php'>Login</a>";
+}
